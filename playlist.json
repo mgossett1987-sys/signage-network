@@ -2,13 +2,18 @@
   {
     "type": "text",
     "title": "LOCAL BUSINESS NETWORK",
-    "subtitle": "Your ad could be here",
+    "subtitle": "Screen: signage-pi-01",
     "duration": 8000
   },
   {
     "type": "image",
     "url": "ads/unnamed.webp",
     "duration": 10000
+  },
+  {
+    "type": "video",
+    "url": "ads/extra-care-test.mp4",
+    "duration": 15000
   },
   {
     "type": "text",
@@ -23,8 +28,3 @@
     "duration": 8000
   }
 ]
-{
-  "type": "video",
-  "url": "ads/extra-care-test.mp4",
-  "duration": 15000
-}
