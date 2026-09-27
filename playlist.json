@@ -27,4 +27,19 @@
     "subtitle": "Today's special: 20% off",
     "duration": 8000
   }
+   {
+    "type": "image",
+    "url": "ads/awesomecut.webp",
+    "duration": 10000
+  },
+   {
+    "type": "image",
+    "url": "ads/outsidephoto.webp",
+    "duration": 10000
+  },
+   {
+    "type": "image",
+    "url": "ads/teamphoto.webp",
+    "duration": 10000
+  },
 ]
