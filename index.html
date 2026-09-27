@@ -2,6 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 html,body{
   margin:0;
@@ -20,6 +21,7 @@ html,body{
   align-items:center;
   justify-content:center;
   text-align:center;
+  background:#111;
 }
 
 .title{
@@ -29,6 +31,13 @@ html,body{
 .subtitle{
   font-size:30px;
   margin-top:25px;
+}
+
+img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  background:#000;
 }
 </style>
 </head>
@@ -57,13 +66,21 @@ function showSlide() {
   if (!playlist.length) return;
 
   const item = playlist[current];
+  const screen = document.getElementById("screen");
 
-  document.getElementById("screen").innerHTML =
-    "<div><div class='title'>" +
-    item.title +
-    "</div><div class='subtitle'>" +
-    (item.subtitle || "") +
-    "</div></div>";
+  if (item.type === "text") {
+    screen.innerHTML =
+      "<div><div class='title'>" +
+      item.title +
+      "</div><div class='subtitle'>" +
+      (item.subtitle || "") +
+      "</div></div>";
+  }
+
+  if (item.type === "image") {
+    screen.innerHTML =
+      "<img src='" + item.url + "'>";
+  }
 
   current = (current + 1) % playlist.length;
 
