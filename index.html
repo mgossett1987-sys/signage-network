@@ -61,12 +61,14 @@ let slideTimer = null;
 let advancing = false;
 let playlistSignature = "";
 
+const PLAYLIST_URL =
+  "https://raw.githubusercontent.com/mgossett1987-sys/signage-network/main/playlist.json";
+
 async function loadPlaylist(firstLoad = false) {
-
   try {
-
     const url =
-      "playlist.json?nocache=" +
+      PLAYLIST_URL +
+      "?nocache=" +
       Date.now();
 
     const response = await fetch(url, {
@@ -100,24 +102,21 @@ async function loadPlaylist(firstLoad = false) {
       firstLoad ||
       newSignature !== playlistSignature
     ) {
-
       console.log(
         "New playlist detected:",
         newPlaylist
       );
 
       playlist = newPlaylist;
-      playlistSignature =
-        newSignature;
+      playlistSignature = newSignature;
 
       if (current >= playlist.length) {
         current = 0;
       }
 
       if (!firstLoad) {
-
         console.log(
-          "Playlist changed. Refreshing display."
+          "Playlist changed. Restarting loop."
         );
 
         current = 0;
@@ -131,36 +130,23 @@ async function loadPlaylist(firstLoad = false) {
       }
 
     } else {
-
       console.log(
         "Playlist checked - no changes."
       );
     }
 
   } catch (error) {
-
     console.error(
       "Playlist load failed:",
       error
     );
 
-    /*
-      If we already have a working playlist,
-      keep playing it.
-
-      Only show an error screen if the Pi
-      has never successfully loaded one.
-    */
-
     if (!playlist.length) {
-
       document.getElementById(
         "screen"
       ).innerHTML =
         "<div>" +
-        "<div class='title'>" +
-        "PLAYLIST ERROR" +
-        "</div>" +
+        "<div class='title'>PLAYLIST ERROR</div>" +
         "<div class='subtitle'>" +
         error +
         "</div>" +
@@ -169,9 +155,7 @@ async function loadPlaylist(firstLoad = false) {
   }
 }
 
-
 function nextSlide() {
-
   if (
     !playlist.length ||
     advancing
@@ -191,16 +175,12 @@ function nextSlide() {
     playlist.length;
 
   setTimeout(() => {
-
     advancing = false;
     showSlide();
-
   }, 100);
 }
 
-
 function showSlide() {
-
   if (!playlist.length) {
     return;
   }
@@ -225,20 +205,12 @@ function showSlide() {
 
   screen.innerHTML = "";
 
-
-  /*
-    IMAGE
-  */
-
   if (item.type === "image") {
 
     const img =
-      document.createElement(
-        "img"
-      );
+      document.createElement("img");
 
-    img.className =
-      "ad-image";
+    img.className = "ad-image";
 
     img.src =
       item.url +
@@ -248,16 +220,13 @@ function showSlide() {
     img.addEventListener(
       "error",
       () => {
-
         console.error(
           "Image failed:",
           item.url
         );
 
         if (slideTimer) {
-          clearTimeout(
-            slideTimer
-          );
+          clearTimeout(slideTimer);
         }
 
         slideTimer =
@@ -280,11 +249,6 @@ function showSlide() {
         duration
       );
   }
-
-
-  /*
-    VIDEO
-  */
 
   else if (
     item.type === "video"
@@ -318,16 +282,13 @@ function showSlide() {
     video.addEventListener(
       "error",
       () => {
-
         console.error(
           "Video failed:",
           item.url
         );
 
         if (slideTimer) {
-          clearTimeout(
-            slideTimer
-          );
+          clearTimeout(slideTimer);
         }
 
         slideTimer =
@@ -344,13 +305,10 @@ function showSlide() {
       video.play();
 
     if (
-      playPromise !==
-      undefined
+      playPromise !== undefined
     ) {
-
       playPromise.catch(
         error => {
-
           console.error(
             "Video autoplay failed:",
             error
@@ -371,33 +329,17 @@ function showSlide() {
       );
     }
 
-    /*
-      If duration exists in JSON,
-      stop video after that amount.
-
-      Otherwise allow it to play
-      until the video ends.
-    */
-
     if (item.duration) {
-
       slideTimer =
         setTimeout(
           () => {
-
             video.pause();
             nextSlide();
-
           },
           item.duration
         );
     }
   }
-
-
-  /*
-    TEXT
-  */
 
   else if (
     item.type === "text"
@@ -424,13 +366,7 @@ function showSlide() {
       );
   }
 
-
-  /*
-    UNKNOWN ITEM
-  */
-
   else {
-
     console.error(
       "Unknown playlist item:",
       item
@@ -444,39 +380,22 @@ function showSlide() {
   }
 }
 
-
 async function start() {
-
-  /*
-    Initial load
-  */
-
   await loadPlaylist(true);
 
   showSlide();
 
-
-  /*
-    Check GitHub for playlist changes
-    every 15 seconds.
-  */
-
   setInterval(
     async () => {
-
       await loadPlaylist(false);
-
     },
     15000
   );
 }
 
-
 start();
 
 </script>
 
-</body>
-</html>
 </body>
 </html>
