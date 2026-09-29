@@ -47,7 +47,7 @@ html, body {
   display: block;
 }
 
-/* EXTRA CARE HAIR CO. WEATHER */
+/* WEATHER */
 
 .weather-card {
   width: 100vw;
@@ -86,7 +86,6 @@ html, body {
 .weather-location {
   font-size: 32px;
   font-weight: 700;
-  letter-spacing: 2px;
   color: #24596a;
   margin-bottom: 8px;
 }
@@ -103,7 +102,6 @@ html, body {
   font-weight: 700;
   line-height: 1;
   color: #153f50;
-  margin: 5px 0 8px 0;
 }
 
 .weather-condition {
@@ -122,9 +120,6 @@ html, body {
 .weather-stats {
   display: flex;
   gap: 25px;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
 }
 
 .weather-stat {
@@ -132,7 +127,6 @@ html, body {
   padding: 18px 25px;
   border-radius: 22px;
   background: rgba(255,255,255,0.72);
-  box-shadow: 0 8px 24px rgba(23,75,92,0.10);
   font-size: 24px;
   font-weight: 700;
   color: #174b5c;
@@ -141,7 +135,6 @@ html, body {
 .weather-butterfly {
   position: absolute;
   opacity: 0.95;
-  pointer-events: none;
 }
 
 .weather-butterfly-one {
@@ -165,9 +158,75 @@ html, body {
   color: #477887;
 }
 
-.weather-error {
-  font-size: 34px;
+/* EVENTS */
+
+.events-card {
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  padding: 45px 70px;
+  background:
+    radial-gradient(circle at 10% 15%, rgba(255,255,255,0.85), transparent 22%),
+    linear-gradient(145deg, #dff6fb 0%, #bfeaf4 50%, #8fd4e5 100%);
+  color: #173f4f;
+  position: relative;
+  overflow: hidden;
+}
+
+.events-brand {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 2px;
   color: #174b5c;
+}
+
+.events-title {
+  font-size: 48px;
+  font-weight: 700;
+  margin: 8px 0 25px 0;
+  color: #e66f47;
+}
+
+.events-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 86%;
+  margin: 0 auto;
+}
+
+.event-item {
+  background: rgba(255,255,255,0.78);
+  border-radius: 18px;
+  padding: 15px 22px;
+  text-align: left;
+  box-shadow: 0 5px 18px rgba(23,75,92,0.08);
+}
+
+.event-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #174b5c;
+}
+
+.event-details {
+  font-size: 20px;
+  color: #477887;
+  margin-top: 5px;
+}
+
+.events-footer {
+  margin-top: 22px;
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: #477887;
+}
+
+.events-butterfly {
+  position: absolute;
+  width: 80px;
+  top: 35px;
+  right: 45px;
 }
 </style>
 </head>
@@ -187,23 +246,20 @@ let playlistSignature = "";
 const PLAYLIST_URL =
   "https://raw.githubusercontent.com/mgossett1987-sys/signage-network/main/playlist.json";
 
+const EVENTS_URL =
+  "https://raw.githubusercontent.com/mgossett1987-sys/signage-network/main/events.json";
+
 async function loadPlaylist(firstLoad = false) {
   try {
-    const url = PLAYLIST_URL + "?nocache=" + Date.now();
-
-    const response = await fetch(url, {
-      method: "GET",
-      cache: "no-store"
-    });
-
-    if (!response.ok) {
-      throw new Error("Playlist HTTP error: " + response.status);
-    }
+    const response = await fetch(
+      PLAYLIST_URL + "?nocache=" + Date.now(),
+      { cache: "no-store" }
+    );
 
     const newPlaylist = await response.json();
 
     if (!Array.isArray(newPlaylist) || !newPlaylist.length) {
-      throw new Error("Playlist is empty or invalid");
+      throw new Error("Playlist invalid");
     }
 
     const newSignature = JSON.stringify(newPlaylist);
@@ -212,16 +268,11 @@ async function loadPlaylist(firstLoad = false) {
       playlist = newPlaylist;
       playlistSignature = newSignature;
 
-      if (current >= playlist.length) {
-        current = 0;
-      }
-
       if (!firstLoad) {
         current = 0;
 
         if (slideTimer) {
           clearTimeout(slideTimer);
-          slideTimer = null;
         }
 
         showSlide();
@@ -229,29 +280,16 @@ async function loadPlaylist(firstLoad = false) {
     }
 
   } catch (error) {
-    console.error("Playlist load failed:", error);
-
-    if (!playlist.length) {
-      document.getElementById("screen").innerHTML =
-        "<div>" +
-        "<div class='title'>PLAYLIST ERROR</div>" +
-        "<div class='subtitle'>" + error + "</div>" +
-        "</div>";
-    }
+    console.error("Playlist error:", error);
   }
 }
 
 function nextSlide() {
-  if (!playlist.length || advancing) {
-    return;
-  }
+  if (!playlist.length || advancing) return;
 
   advancing = true;
 
-  if (slideTimer) {
-    clearTimeout(slideTimer);
-    slideTimer = null;
-  }
+  if (slideTimer) clearTimeout(slideTimer);
 
   current = (current + 1) % playlist.length;
 
@@ -268,22 +306,16 @@ function weatherCodeToText(code) {
     2: "Partly Cloudy",
     3: "Cloudy",
     45: "Foggy",
-    48: "Rime Fog",
     51: "Light Drizzle",
-    53: "Drizzle",
-    55: "Heavy Drizzle",
     61: "Light Rain",
     63: "Rain",
     65: "Heavy Rain",
     71: "Light Snow",
     73: "Snow",
-    75: "Heavy Snow",
     80: "Rain Showers",
     81: "Rain Showers",
     82: "Heavy Showers",
-    95: "Thunderstorms",
-    96: "Thunderstorms",
-    99: "Severe Thunderstorms"
+    95: "Thunderstorms"
   };
 
   return map[code] || "Current Conditions";
@@ -292,90 +324,130 @@ function weatherCodeToText(code) {
 async function showWeather(item) {
   const screen = document.getElementById("screen");
 
-  screen.innerHTML =
-    "<div class='weather-card'>" +
-    "<div class='weather-label'>LOADING WEATHER...</div>" +
-    "</div>";
-
   try {
-    const lat = item.latitude;
-    const lon = item.longitude;
-
-    const weatherUrl =
+    const url =
       "https://api.open-meteo.com/v1/forecast" +
-      "?latitude=" + encodeURIComponent(lat) +
-      "&longitude=" + encodeURIComponent(lon) +
+      "?latitude=" + item.latitude +
+      "&longitude=" + item.longitude +
       "&current=temperature_2m,apparent_temperature,weather_code" +
       "&daily=temperature_2m_max,temperature_2m_min,precipitation_probability_max" +
-      "&temperature_unit=fahrenheit" +
-      "&timezone=auto" +
-      "&nocache=" + Date.now();
+      "&temperature_unit=fahrenheit&timezone=auto";
 
-    const response = await fetch(weatherUrl, {
-      cache: "no-store"
-    });
-
-    if (!response.ok) {
-      throw new Error("Weather HTTP error: " + response.status);
-    }
-
+    const response = await fetch(url, { cache: "no-store" });
     const data = await response.json();
 
     const temp = Math.round(data.current.temperature_2m);
     const feels = Math.round(data.current.apparent_temperature);
-    const condition = weatherCodeToText(data.current.weather_code);
     const high = Math.round(data.daily.temperature_2m_max[0]);
     const low = Math.round(data.daily.temperature_2m_min[0]);
     const rain = Math.round(data.daily.precipitation_probability_max[0]);
-    const location = item.location || "LOCAL WEATHER";
-    const butterflyUrl = "ads/butterfly.png?nocache=" + Date.now();
 
     screen.innerHTML =
       "<div class='weather-card'>" +
 
-      "<img class='weather-butterfly weather-butterfly-one' src='" + butterflyUrl + "'>" +
-      "<img class='weather-butterfly weather-butterfly-two' src='" + butterflyUrl + "'>" +
+      "<img class='weather-butterfly weather-butterfly-one' src='ads/butterfly.png'>" +
+      "<img class='weather-butterfly weather-butterfly-two' src='ads/butterfly.png'>" +
 
       "<div class='weather-brand'>EXTRA CARE HAIR CO.</div>" +
       "<div class='weather-tagline'>A SALON FOR EVERYONE</div>" +
-      "<div class='weather-location'>" + location + "</div>" +
+      "<div class='weather-location'>" + item.location + "</div>" +
       "<div class='weather-label'>TODAY'S WEATHER</div>" +
       "<div class='weather-temp'>" + temp + "°F</div>" +
-      "<div class='weather-condition'>" + condition + "</div>" +
+      "<div class='weather-condition'>" +
+      weatherCodeToText(data.current.weather_code) +
+      "</div>" +
       "<div class='weather-feels'>Feels like " + feels + "°F</div>" +
 
       "<div class='weather-stats'>" +
-      "<div class='weather-stat'>HIGH&nbsp;&nbsp;" + high + "°</div>" +
-      "<div class='weather-stat'>LOW&nbsp;&nbsp;" + low + "°</div>" +
-      "<div class='weather-stat'>RAIN&nbsp;&nbsp;" + rain + "%</div>" +
+      "<div class='weather-stat'>HIGH " + high + "°</div>" +
+      "<div class='weather-stat'>LOW " + low + "°</div>" +
+      "<div class='weather-stat'>RAIN " + rain + "%</div>" +
       "</div>" +
 
       "<div class='weather-footer'>RELAX • REFRESH • FEEL LIKE YOU</div>" +
+
       "</div>";
 
   } catch (error) {
-    console.error("Weather failed:", error);
+    console.error("Weather error:", error);
+    screen.innerHTML = "<div class='weather-card'>Weather unavailable</div>";
+  }
+
+  slideTimer = setTimeout(nextSlide, item.duration || 12000);
+}
+
+async function showEvents(item) {
+  const screen = document.getElementById("screen");
+
+  try {
+    const response = await fetch(
+      EVENTS_URL + "?nocache=" + Date.now(),
+      { cache: "no-store" }
+    );
+
+    if (!response.ok) {
+      throw new Error("Events HTTP error");
+    }
+
+    const data = await response.json();
+
+    const events = (data.events || []).slice(0, 4);
+
+    let eventHtml = "";
+
+    events.forEach(event => {
+      eventHtml +=
+        "<div class='event-item'>" +
+        "<div class='event-title'>" +
+        event.title +
+        "</div>" +
+        "<div class='event-details'>" +
+        event.date +
+        " • " +
+        event.time +
+        " • " +
+        event.location +
+        "</div>" +
+        "</div>";
+    });
 
     screen.innerHTML =
-      "<div class='weather-card'>" +
-      "<div class='weather-brand'>EXTRA CARE HAIR CO.</div>" +
-      "<div class='weather-error'>Weather temporarily unavailable</div>" +
+      "<div class='events-card'>" +
+
+      "<img class='events-butterfly' src='ads/butterfly.png'>" +
+
+      "<div class='events-brand'>EXTRA CARE HAIR CO.</div>" +
+      "<div class='events-title'>" +
+      (data.title || "Family Fun Around 417-Land") +
+      "</div>" +
+
+      "<div class='events-list'>" +
+      eventHtml +
+      "</div>" +
+
+      "<div class='events-footer'>" +
+      "UPCOMING FAMILY-FRIENDLY EVENTS" +
+      "</div>" +
+
+      "</div>";
+
+  } catch (error) {
+    console.error("Events error:", error);
+
+    screen.innerHTML =
+      "<div class='events-card'>" +
+      "<div class='events-title'>Local Events</div>" +
+      "<div class='event-details'>Events temporarily unavailable</div>" +
       "</div>";
   }
 
-  const duration = item.duration || 12000;
-  slideTimer = setTimeout(nextSlide, duration);
+  slideTimer = setTimeout(nextSlide, item.duration || 15000);
 }
 
 function showSlide() {
-  if (!playlist.length) {
-    return;
-  }
+  if (!playlist.length) return;
 
-  if (slideTimer) {
-    clearTimeout(slideTimer);
-    slideTimer = null;
-  }
+  if (slideTimer) clearTimeout(slideTimer);
 
   const item = playlist[current];
   const screen = document.getElementById("screen");
@@ -388,17 +460,14 @@ function showSlide() {
     img.className = "ad-image";
     img.src = item.url + "?nocache=" + Date.now();
 
-    img.addEventListener("error", () => {
-      if (slideTimer) {
-        clearTimeout(slideTimer);
-      }
+    img.onerror = () => {
       slideTimer = setTimeout(nextSlide, 1500);
-    });
+    };
 
     screen.appendChild(img);
 
-    const duration = item.duration || 10000;
-    slideTimer = setTimeout(nextSlide, duration);
+    slideTimer =
+      setTimeout(nextSlide, item.duration || 10000);
   }
 
   else if (item.type === "video") {
@@ -409,42 +478,29 @@ function showSlide() {
     video.autoplay = true;
     video.muted = true;
     video.playsInline = true;
-    video.preload = "auto";
 
-    video.addEventListener("ended", () => {
-      nextSlide();
-    });
-
-    video.addEventListener("error", () => {
-      if (slideTimer) {
-        clearTimeout(slideTimer);
-      }
+    video.onended = nextSlide;
+    video.onerror = () => {
       slideTimer = setTimeout(nextSlide, 1500);
-    });
+    };
 
     screen.appendChild(video);
 
-    const playPromise = video.play();
-
-    if (playPromise !== undefined) {
-      playPromise.catch(() => {
-        if (slideTimer) {
-          clearTimeout(slideTimer);
-        }
-        slideTimer = setTimeout(nextSlide, 1500);
-      });
-    }
+    video.play().catch(() => {
+      slideTimer = setTimeout(nextSlide, 1500);
+    });
 
     if (item.duration) {
-      slideTimer = setTimeout(() => {
-        video.pause();
-        nextSlide();
-      }, item.duration);
+      slideTimer = setTimeout(nextSlide, item.duration);
     }
   }
 
   else if (item.type === "weather") {
     showWeather(item);
+  }
+
+  else if (item.type === "events") {
+    showEvents(item);
   }
 
   else if (item.type === "text") {
@@ -454,8 +510,8 @@ function showSlide() {
       "<div class='subtitle'>" + (item.subtitle || "") + "</div>" +
       "</div>";
 
-    const duration = item.duration || 8000;
-    slideTimer = setTimeout(nextSlide, duration);
+    slideTimer =
+      setTimeout(nextSlide, item.duration || 8000);
   }
 
   else {
