@@ -1,1 +1,30 @@
-
+{
+  "title": "Family Fun Around 417-Land",
+  "updated": "2026-09-29T14:30:00-05:00",
+  "events": [
+    {
+      "title": "Family Storytime",
+      "date": "2026-10-01",
+      "time": "10:00 AM",
+      "location": "Springfield-Greene County Library"
+    },
+    {
+      "title": "Kids Craft Afternoon",
+      "date": "2026-10-02",
+      "time": "3:30 PM",
+      "location": "Willard, MO"
+    },
+    {
+      "title": "Fall Family Festival",
+      "date": "2026-10-03",
+      "time": "11:00 AM",
+      "location": "Springfield, MO"
+    },
+    {
+      "title": "Family Nature Walk",
+      "date": "2026-10-04",
+      "time": "2:00 PM",
+      "location": "Springfield, MO"
+    }
+  ]
+}
