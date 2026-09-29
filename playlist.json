@@ -11,6 +11,10 @@
     "duration": 10000
   },
   {
+  "type": "video",
+  "url": "ads/sample-5s.mp4"
+  },
+  {
     "type": "text",
     "title": "COMMUNITY EVENTS",
     "subtitle": "Local events • sports • announcements",
