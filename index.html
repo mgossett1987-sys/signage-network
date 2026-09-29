@@ -46,6 +46,68 @@ html, body {
   background: black;
   display: block;
 }
+
+.weather-card {
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  padding: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background:
+    radial-gradient(circle at top, #2b6cb0 0%, #0f172a 60%, #020617 100%);
+  color: white;
+}
+
+.weather-location {
+  font-size: 42px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.weather-label {
+  font-size: 28px;
+  opacity: 0.8;
+  margin-bottom: 10px;
+}
+
+.weather-temp {
+  font-size: 120px;
+  font-weight: 700;
+  line-height: 1;
+  margin: 10px 0;
+}
+
+.weather-condition {
+  font-size: 42px;
+  margin-bottom: 18px;
+}
+
+.weather-feels {
+  font-size: 28px;
+  opacity: 0.85;
+  margin-bottom: 35px;
+}
+
+.weather-stats {
+  display: flex;
+  gap: 60px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.weather-stat {
+  font-size: 28px;
+}
+
+.weather-error {
+  font-size: 36px;
+  color: white;
+}
 </style>
 </head>
 
@@ -178,6 +240,174 @@ function nextSlide() {
     advancing = false;
     showSlide();
   }, 100);
+}
+
+function weatherCodeToText(code) {
+  const map = {
+    0: "Clear",
+    1: "Mostly Clear",
+    2: "Partly Cloudy",
+    3: "Cloudy",
+    45: "Foggy",
+    48: "Rime Fog",
+    51: "Light Drizzle",
+    53: "Drizzle",
+    55: "Heavy Drizzle",
+    61: "Light Rain",
+    63: "Rain",
+    65: "Heavy Rain",
+    71: "Light Snow",
+    73: "Snow",
+    75: "Heavy Snow",
+    80: "Rain Showers",
+    81: "Rain Showers",
+    82: "Heavy Showers",
+    95: "Thunderstorms",
+    96: "Thunderstorms",
+    99: "Severe Thunderstorms"
+  };
+
+  return map[code] || "Current Conditions";
+}
+
+async function showWeather(item) {
+  const screen = document.getElementById("screen");
+
+  screen.innerHTML =
+    "<div class='weather-card'>" +
+    "<div class='weather-label'>LOADING WEATHER...</div>" +
+    "</div>";
+
+  try {
+    const lat = item.latitude;
+    const lon = item.longitude;
+
+    const weatherUrl =
+      "https://api.open-meteo.com/v1/forecast" +
+      "?latitude=" + encodeURIComponent(lat) +
+      "&longitude=" + encodeURIComponent(lon) +
+      "&current=temperature_2m,apparent_temperature,weather_code" +
+      "&daily=temperature_2m_max,temperature_2m_min,precipitation_probability_max" +
+      "&temperature_unit=fahrenheit" +
+      "&timezone=auto" +
+      "&nocache=" + Date.now();
+
+    const response = await fetch(weatherUrl, {
+      cache: "no-store"
+    });
+
+    if (!response.ok) {
+      throw new Error(
+        "Weather HTTP error: " +
+        response.status
+      );
+    }
+
+    const data = await response.json();
+
+    const temp =
+      Math.round(data.current.temperature_2m);
+
+    const feels =
+      Math.round(data.current.apparent_temperature);
+
+    const condition =
+      weatherCodeToText(
+        data.current.weather_code
+      );
+
+    const high =
+      Math.round(
+        data.daily.temperature_2m_max[0]
+      );
+
+    const low =
+      Math.round(
+        data.daily.temperature_2m_min[0]
+      );
+
+    const rain =
+      Math.round(
+        data.daily.precipitation_probability_max[0]
+      );
+
+    const location =
+      item.location ||
+      "LOCAL WEATHER";
+
+    screen.innerHTML =
+      "<div class='weather-card'>" +
+
+      "<div class='weather-location'>" +
+      location +
+      "</div>" +
+
+      "<div class='weather-label'>" +
+      "CURRENT WEATHER" +
+      "</div>" +
+
+      "<div class='weather-temp'>" +
+      temp +
+      "°F" +
+      "</div>" +
+
+      "<div class='weather-condition'>" +
+      condition +
+      "</div>" +
+
+      "<div class='weather-feels'>" +
+      "Feels like " +
+      feels +
+      "°F" +
+      "</div>" +
+
+      "<div class='weather-stats'>" +
+
+      "<div class='weather-stat'>" +
+      "HIGH " +
+      high +
+      "°" +
+      "</div>" +
+
+      "<div class='weather-stat'>" +
+      "LOW " +
+      low +
+      "°" +
+      "</div>" +
+
+      "<div class='weather-stat'>" +
+      "RAIN " +
+      rain +
+      "%" +
+      "</div>" +
+
+      "</div>" +
+
+      "</div>";
+
+  } catch (error) {
+    console.error(
+      "Weather failed:",
+      error
+    );
+
+    screen.innerHTML =
+      "<div class='weather-card'>" +
+      "<div class='weather-error'>" +
+      "Weather temporarily unavailable" +
+      "</div>" +
+      "</div>";
+  }
+
+  const duration =
+    item.duration ||
+    12000;
+
+  slideTimer =
+    setTimeout(
+      nextSlide,
+      duration
+    );
 }
 
 function showSlide() {
@@ -339,6 +569,12 @@ function showSlide() {
           item.duration
         );
     }
+  }
+
+  else if (
+    item.type === "weather"
+  ) {
+    showWeather(item);
   }
 
   else if (
