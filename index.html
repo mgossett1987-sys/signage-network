@@ -376,6 +376,12 @@ async function showWeather(item) {
   slideTimer = setTimeout(nextSlide, item.duration || 12000);
 }
 
+function escapeEventText(value) {
+  return String(value == null ? "" : value).replace(/[&<>"']/g, character => ({
+    "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+  }[character]));
+}
+
 async function showEvents(item) {
   const screen = document.getElementById("screen");
 
@@ -399,14 +405,14 @@ async function showEvents(item) {
       eventHtml +=
         "<div class='event-item'>" +
         "<div class='event-title'>" +
-        event.title +
+        escapeEventText(event.title) +
         "</div>" +
         "<div class='event-details'>" +
-        event.date +
+        escapeEventText(event.date) +
         " • " +
-        event.time +
+        escapeEventText(event.time) +
         " • " +
-        event.location +
+        escapeEventText(event.location) +
         "</div>" +
         "</div>";
     });
@@ -418,7 +424,7 @@ async function showEvents(item) {
 
       "<div class='events-brand'>EXTRA CARE HAIR CO.</div>" +
       "<div class='events-title'>" +
-      (data.title || "Family Fun Around 417-Land") +
+      escapeEventText(data.title || "Family Fun Around The Area") +
       "</div>" +
 
       "<div class='events-list'>" +
