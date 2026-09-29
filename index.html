@@ -140,23 +140,32 @@ html, body {
   color: #174b5c;
 }
 
-.weather-butterfly {
+.weather-accent {
   position: absolute;
-  font-size: 58px;
-  opacity: 0.9;
+  border-radius: 50%;
+  background:
+    radial-gradient(
+      circle at 35% 35%,
+      #ffd48a 0%,
+      #f5a24f 45%,
+      #e66f47 100%
+    );
+  opacity: 0.88;
+  box-shadow: 0 10px 24px rgba(230, 111, 71, 0.18);
 }
 
-.weather-butterfly-one {
+.weather-accent-one {
+  width: 54px;
+  height: 54px;
   top: 55px;
   right: 85px;
-  transform: rotate(18deg);
 }
 
-.weather-butterfly-two {
+.weather-accent-two {
+  width: 38px;
+  height: 38px;
   bottom: 55px;
   left: 80px;
-  transform: rotate(-16deg);
-  font-size: 42px;
 }
 
 .weather-footer {
@@ -238,10 +247,6 @@ async function loadPlaylist(firstLoad = false) {
       }
 
       if (!firstLoad) {
-        console.log(
-          "Playlist changed. Restarting loop."
-        );
-
         current = 0;
 
         if (slideTimer) {
@@ -251,11 +256,6 @@ async function loadPlaylist(firstLoad = false) {
 
         showSlide();
       }
-
-    } else {
-      console.log(
-        "Playlist checked - no changes."
-      );
     }
 
   } catch (error) {
@@ -406,8 +406,8 @@ async function showWeather(item) {
     screen.innerHTML =
       "<div class='weather-card'>" +
 
-      "<div class='weather-butterfly weather-butterfly-one'>🦋</div>" +
-      "<div class='weather-butterfly weather-butterfly-two'>🦋</div>" +
+      "<div class='weather-accent weather-accent-one'></div>" +
+      "<div class='weather-accent weather-accent-two'></div>" +
 
       "<div class='weather-brand'>" +
       "EXTRA CARE HAIR CO." +
@@ -514,11 +514,6 @@ function showSlide() {
       "screen"
     );
 
-  console.log(
-    "Showing item:",
-    item
-  );
-
   screen.innerHTML = "";
 
   if (item.type === "image") {
@@ -537,11 +532,6 @@ function showSlide() {
     img.addEventListener(
       "error",
       () => {
-        console.error(
-          "Image failed:",
-          item.url
-        );
-
         if (slideTimer) {
           clearTimeout(slideTimer);
         }
@@ -599,11 +589,6 @@ function showSlide() {
     video.addEventListener(
       "error",
       () => {
-        console.error(
-          "Video failed:",
-          item.url
-        );
-
         if (slideTimer) {
           clearTimeout(slideTimer);
         }
@@ -625,12 +610,7 @@ function showSlide() {
       playPromise !== undefined
     ) {
       playPromise.catch(
-        error => {
-          console.error(
-            "Video autoplay failed:",
-            error
-          );
-
+        () => {
           if (slideTimer) {
             clearTimeout(
               slideTimer
@@ -690,11 +670,6 @@ function showSlide() {
   }
 
   else {
-    console.error(
-      "Unknown playlist item:",
-      item
-    );
-
     slideTimer =
       setTimeout(
         nextSlide,
@@ -720,7 +695,5 @@ start();
 
 </script>
 
-</body>
-</html>
 </body>
 </html>
