@@ -6,6 +6,11 @@
     "duration": 8000
   },
   {
+  "type": "image",
+  "url": "ads/this-file-does-not-exist.jpg",
+  "duration": 10000
+  },
+  {
     "type": "image",
     "url": "ads/unnamed.webp",
     "duration": 10000
