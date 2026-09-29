@@ -17,6 +17,10 @@
   "duration": 12000
   },
   {
+  "type": "events",
+  "duration": 15000
+  },
+  {
     "type": "image",
     "url": "ads/unnamed.webp",
     "duration": 10000
