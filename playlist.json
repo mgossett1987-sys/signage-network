@@ -6,6 +6,11 @@
   },
   {
     "type": "image",
+    "url": "ads/get-a-screen.png",
+    "duration": 12000
+  },
+  {
+    "type": "image",
     "url": "ads/unnamed.webp",
     "duration": 10000
   },
@@ -91,6 +96,11 @@
   },
   {
     "type": "image",
+    "url": "ads/get-a-screen.png",
+    "duration": 12000
+  },
+  {
+    "type": "image",
     "url": "ads/IMG_1734.JPEG",
     "duration": 10000
   },
@@ -127,6 +137,11 @@
   {
     "type": "image",
     "url": "ads/google-review.png",
+    "duration": 12000
+  },
+  {
+    "type": "image",
+    "url": "ads/get-a-screen.png",
     "duration": 12000
   },
   {
@@ -168,6 +183,11 @@
     "type": "image",
     "url": "ads/follow-us.png",
     "duration": 10000
+  },
+  {
+    "type": "image",
+    "url": "ads/get-a-screen.png",
+    "duration": 12000
   },
   {
     "type": "image",
@@ -231,7 +251,17 @@
   },
   {
     "type": "image",
+    "url": "ads/get-a-screen.png",
+    "duration": 12000
+  },
+  {
+    "type": "image",
     "url": "ads/thank-you.png",
     "duration": 10000
+  },
+  {
+    "type": "image",
+    "url": "ads/get-a-screen.png",
+    "duration": 12000
   }
 ]
