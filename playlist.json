@@ -10,6 +10,13 @@
     "duration": 12000
   },
   {
+  "type": "weather",
+  "location": "Springfield, MO",
+  "latitude": 37.2090,
+  "longitude": -93.2923,
+  "duration": 12000
+  },
+  {
     "type": "image",
     "url": "ads/unnamed.webp",
     "duration": 10000
