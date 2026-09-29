@@ -4,6 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+
 <style>
 html, body {
   margin: 0;
@@ -55,36 +59,123 @@ let playlist = [];
 let current = 0;
 let slideTimer = null;
 let advancing = false;
+let playlistSignature = "";
 
-async function loadPlaylist() {
+async function loadPlaylist(firstLoad = false) {
+
   try {
-    const response = await fetch("playlist.json?t=" + Date.now());
+
+    const url =
+      "playlist.json?nocache=" +
+      Date.now();
+
+    const response = await fetch(url, {
+      method: "GET",
+      cache: "no-store"
+    });
 
     if (!response.ok) {
-      throw new Error("Playlist HTTP error: " + response.status);
+      throw new Error(
+        "Playlist HTTP error: " +
+        response.status
+      );
     }
 
-    const newPlaylist = await response.json();
+    const newPlaylist =
+      await response.json();
 
-    if (Array.isArray(newPlaylist) && newPlaylist.length) {
+    if (
+      !Array.isArray(newPlaylist) ||
+      !newPlaylist.length
+    ) {
+      throw new Error(
+        "Playlist is empty or invalid"
+      );
+    }
+
+    const newSignature =
+      JSON.stringify(newPlaylist);
+
+    if (
+      firstLoad ||
+      newSignature !== playlistSignature
+    ) {
+
+      console.log(
+        "New playlist detected:",
+        newPlaylist
+      );
+
       playlist = newPlaylist;
-      console.log("Playlist loaded:", playlist);
+      playlistSignature =
+        newSignature;
+
+      if (current >= playlist.length) {
+        current = 0;
+      }
+
+      if (!firstLoad) {
+
+        console.log(
+          "Playlist changed. Refreshing display."
+        );
+
+        current = 0;
+
+        if (slideTimer) {
+          clearTimeout(slideTimer);
+          slideTimer = null;
+        }
+
+        showSlide();
+      }
+
+    } else {
+
+      console.log(
+        "Playlist checked - no changes."
+      );
     }
 
   } catch (error) {
-    console.error("Playlist load failed:", error);
+
+    console.error(
+      "Playlist load failed:",
+      error
+    );
+
+    /*
+      If we already have a working playlist,
+      keep playing it.
+
+      Only show an error screen if the Pi
+      has never successfully loaded one.
+    */
 
     if (!playlist.length) {
-      document.getElementById("screen").innerHTML =
-        "<div><div class='title'>PLAYLIST ERROR</div><div class='subtitle'>" +
+
+      document.getElementById(
+        "screen"
+      ).innerHTML =
+        "<div>" +
+        "<div class='title'>" +
+        "PLAYLIST ERROR" +
+        "</div>" +
+        "<div class='subtitle'>" +
         error +
-        "</div></div>";
+        "</div>" +
+        "</div>";
     }
   }
 }
 
+
 function nextSlide() {
-  if (!playlist.length || advancing) {
+
+  if (
+    !playlist.length ||
+    advancing
+  ) {
     return;
   }
 
@@ -95,15 +186,21 @@ function nextSlide() {
     slideTimer = null;
   }
 
-  current = (current + 1) % playlist.length;
+  current =
+    (current + 1) %
+    playlist.length;
 
   setTimeout(() => {
+
     advancing = false;
     showSlide();
+
   }, 100);
 }
 
+
 function showSlide() {
+
   if (!playlist.length) {
     return;
   }
@@ -113,118 +210,273 @@ function showSlide() {
     slideTimer = null;
   }
 
-  const item = playlist[current];
-  const screen = document.getElementById("screen");
+  const item =
+    playlist[current];
 
-  console.log("Showing item:", item);
+  const screen =
+    document.getElementById(
+      "screen"
+    );
+
+  console.log(
+    "Showing item:",
+    item
+  );
 
   screen.innerHTML = "";
 
+
+  /*
+    IMAGE
+  */
+
   if (item.type === "image") {
 
-    const img = document.createElement("img");
+    const img =
+      document.createElement(
+        "img"
+      );
 
-    img.className = "ad-image";
-    img.src = item.url + "?t=" + Date.now();
+    img.className =
+      "ad-image";
 
-    img.addEventListener("error", () => {
-      console.error("Image failed:", item.url);
+    img.src =
+      item.url +
+      "?nocache=" +
+      Date.now();
 
-      if (slideTimer) {
-        clearTimeout(slideTimer);
+    img.addEventListener(
+      "error",
+      () => {
+
+        console.error(
+          "Image failed:",
+          item.url
+        );
+
+        if (slideTimer) {
+          clearTimeout(
+            slideTimer
+          );
+        }
+
+        slideTimer =
+          setTimeout(
+            nextSlide,
+            1500
+          );
       }
-
-      slideTimer = setTimeout(nextSlide, 1500);
-    });
+    );
 
     screen.appendChild(img);
 
-    const duration = item.duration || 10000;
+    const duration =
+      item.duration ||
+      10000;
 
-    slideTimer = setTimeout(nextSlide, duration);
+    slideTimer =
+      setTimeout(
+        nextSlide,
+        duration
+      );
   }
 
-  else if (item.type === "video") {
 
-    const video = document.createElement("video");
+  /*
+    VIDEO
+  */
 
-    video.className = "ad-video";
-    video.src = item.url + "?t=" + Date.now();
+  else if (
+    item.type === "video"
+  ) {
+
+    const video =
+      document.createElement(
+        "video"
+      );
+
+    video.className =
+      "ad-video";
+
+    video.src =
+      item.url +
+      "?nocache=" +
+      Date.now();
 
     video.autoplay = true;
     video.muted = true;
     video.playsInline = true;
     video.preload = "auto";
 
-    video.addEventListener("ended", () => {
-      nextSlide();
-    });
-
-    video.addEventListener("error", () => {
-      console.error("Video failed:", item.url);
-
-      if (slideTimer) {
-        clearTimeout(slideTimer);
+    video.addEventListener(
+      "ended",
+      () => {
+        nextSlide();
       }
+    );
 
-      slideTimer = setTimeout(nextSlide, 1500);
-    });
+    video.addEventListener(
+      "error",
+      () => {
+
+        console.error(
+          "Video failed:",
+          item.url
+        );
+
+        if (slideTimer) {
+          clearTimeout(
+            slideTimer
+          );
+        }
+
+        slideTimer =
+          setTimeout(
+            nextSlide,
+            1500
+          );
+      }
+    );
 
     screen.appendChild(video);
 
-    const playPromise = video.play();
+    const playPromise =
+      video.play();
 
-    if (playPromise !== undefined) {
-      playPromise.catch(error => {
-        console.error("Video autoplay failed:", error);
+    if (
+      playPromise !==
+      undefined
+    ) {
 
-        if (slideTimer) {
-          clearTimeout(slideTimer);
+      playPromise.catch(
+        error => {
+
+          console.error(
+            "Video autoplay failed:",
+            error
+          );
+
+          if (slideTimer) {
+            clearTimeout(
+              slideTimer
+            );
+          }
+
+          slideTimer =
+            setTimeout(
+              nextSlide,
+              1500
+            );
         }
-
-        slideTimer = setTimeout(nextSlide, 1500);
-      });
+      );
     }
 
+    /*
+      If duration exists in JSON,
+      stop video after that amount.
+
+      Otherwise allow it to play
+      until the video ends.
+    */
+
     if (item.duration) {
-      slideTimer = setTimeout(() => {
-        video.pause();
-        nextSlide();
-      }, item.duration);
+
+      slideTimer =
+        setTimeout(
+          () => {
+
+            video.pause();
+            nextSlide();
+
+          },
+          item.duration
+        );
     }
   }
 
-  else if (item.type === "text") {
+
+  /*
+    TEXT
+  */
+
+  else if (
+    item.type === "text"
+  ) {
 
     screen.innerHTML =
       "<div>" +
-      "<div class='title'>" + (item.title || "") + "</div>" +
-      "<div class='subtitle'>" + (item.subtitle || "") + "</div>" +
+      "<div class='title'>" +
+      (item.title || "") +
+      "</div>" +
+      "<div class='subtitle'>" +
+      (item.subtitle || "") +
+      "</div>" +
       "</div>";
 
-    const duration = item.duration || 8000;
+    const duration =
+      item.duration ||
+      8000;
 
-    slideTimer = setTimeout(nextSlide, duration);
+    slideTimer =
+      setTimeout(
+        nextSlide,
+        duration
+      );
   }
+
+
+  /*
+    UNKNOWN ITEM
+  */
 
   else {
-    console.error("Unknown playlist item type:", item);
-    slideTimer = setTimeout(nextSlide, 1500);
+
+    console.error(
+      "Unknown playlist item:",
+      item
+    );
+
+    slideTimer =
+      setTimeout(
+        nextSlide,
+        1500
+      );
   }
 }
 
+
 async function start() {
-  await loadPlaylist();
+
+  /*
+    Initial load
+  */
+
+  await loadPlaylist(true);
+
   showSlide();
 
-  setInterval(async () => {
-    await loadPlaylist();
-  }, 60000);
+
+  /*
+    Check GitHub for playlist changes
+    every 15 seconds.
+  */
+
+  setInterval(
+    async () => {
+
+      await loadPlaylist(false);
+
+    },
+    15000
+  );
 }
+
 
 start();
 
 </script>
 
+</body>
+</html>
 </body>
 </html>
