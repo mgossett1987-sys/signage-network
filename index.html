@@ -34,11 +34,13 @@ html, body {
   margin-top: 25px;
 }
 
-.ad-image {
+.ad-image,
+.ad-video {
   width: 100vw;
   height: 100vh;
   object-fit: contain;
   background: black;
+  display: block;
 }
 </style>
 </head>
@@ -51,18 +53,40 @@ html, body {
 
 let playlist = [];
 let current = 0;
+let slideTimer = null;
 
 async function loadPlaylist() {
   try {
     const response = await fetch("playlist.json?t=" + Date.now());
+
+    if (!response.ok) {
+      throw new Error("Playlist HTTP error: " + response.status);
+    }
+
     playlist = await response.json();
+
     console.log("Playlist loaded:", playlist);
+
   } catch (error) {
+
+    console.error("Playlist load failed:", error);
+
     document.getElementById("screen").innerHTML =
       "<div><div class='title'>PLAYLIST ERROR</div><div class='subtitle'>" +
       error +
       "</div></div>";
   }
+}
+
+function nextSlide() {
+
+  if (!playlist.length) {
+    return;
+  }
+
+  current = (current + 1) % playlist.length;
+
+  showSlide();
 }
 
 function showSlide() {
@@ -71,21 +95,78 @@ function showSlide() {
     return;
   }
 
+  if (slideTimer) {
+    clearTimeout(slideTimer);
+    slideTimer = null;
+  }
+
   const item = playlist[current];
   const screen = document.getElementById("screen");
 
   console.log("Showing item:", item);
 
+  screen.innerHTML = "";
+
   if (item.type === "image") {
 
-    screen.innerHTML =
-      "<img class='ad-image' src='" +
+    const img = document.createElement("img");
+
+    img.className = "ad-image";
+
+    img.src =
       item.url +
       "?t=" +
-      Date.now() +
-      "'>";
+      Date.now();
 
-  } else {
+    screen.appendChild(img);
+
+    const duration = item.duration || 10000;
+
+    slideTimer = setTimeout(nextSlide, duration);
+
+  }
+
+  else if (item.type === "video") {
+
+    const video = document.createElement("video");
+
+    video.className = "ad-video";
+
+    video.src =
+      item.url +
+      "?t=" +
+      Date.now();
+
+    video.autoplay = true;
+    video.muted = true;
+    video.playsInline = true;
+    video.preload = "auto";
+
+    screen.appendChild(video);
+
+    video.addEventListener("ended", () => {
+      nextSlide();
+    });
+
+    video.addEventListener("error", () => {
+      console.error("Video failed:", item.url);
+      slideTimer = setTimeout(nextSlide, 3000);
+    });
+
+    if (item.duration) {
+
+      slideTimer = setTimeout(() => {
+
+        video.pause();
+
+        nextSlide();
+
+      }, item.duration);
+    }
+
+  }
+
+  else {
 
     screen.innerHTML =
       "<div>" +
@@ -93,21 +174,22 @@ function showSlide() {
       "<div class='subtitle'>" + (item.subtitle || "") + "</div>" +
       "</div>";
 
+    const duration = item.duration || 8000;
+
+    slideTimer = setTimeout(nextSlide, duration);
   }
-
-  const duration = item.duration || 8000;
-
-  current = (current + 1) % playlist.length;
-
-  setTimeout(showSlide, duration);
 }
 
 async function start() {
+
   await loadPlaylist();
+
   showSlide();
 
   setInterval(async () => {
+
     await loadPlaylist();
+
   }, 60000);
 }
 
