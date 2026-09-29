@@ -6,24 +6,15 @@
   },
   {
     "type": "image",
-    "url": "ads/get-a-screen.png",
-    "duration": 12000
-  },
-  {
-  "type": "weather",
-  "location": "Springfield, MO",
-  "latitude": 37.2090,
-  "longitude": -93.2923,
-  "duration": 12000
-  },
-  {
-  "type": "events",
-  "duration": 15000
-  },
-  {
-    "type": "image",
     "url": "ads/unnamed.webp",
     "duration": 10000
+  },
+  {
+    "type": "weather",
+    "location": "Springfield, MO",
+    "latitude": 37.2090,
+    "longitude": -93.2923,
+    "duration": 12000
   },
   {
     "type": "image",
@@ -37,8 +28,17 @@
   },
   {
     "type": "image",
+    "url": "ads/get-a-screen.png",
+    "duration": 12000
+  },
+  {
+    "type": "image",
     "url": "ads/1000012056.JPEG",
     "duration": 10000
+  },
+  {
+    "type": "events",
+    "duration": 15000
   },
   {
     "type": "image",
@@ -52,6 +52,11 @@
   },
   {
     "type": "image",
+    "url": "ads/book-now.png",
+    "duration": 12000
+  },
+  {
+    "type": "image",
     "url": "ads/136d447874b3b06a54dafb2023c875d0.JPEG",
     "duration": 10000
   },
@@ -59,6 +64,13 @@
     "type": "image",
     "url": "ads/1895852841417948902.JPEG",
     "duration": 10000
+  },
+  {
+    "type": "weather",
+    "location": "Springfield, MO",
+    "latitude": 37.2090,
+    "longitude": -93.2923,
+    "duration": 12000
   },
   {
     "type": "image",
@@ -72,13 +84,27 @@
   },
   {
     "type": "image",
+    "url": "ads/google-review.png",
+    "duration": 12000
+  },
+  {
+    "type": "image",
     "url": "ads/IMG_0750.JPEG",
     "duration": 10000
   },
   {
     "type": "image",
+    "url": "ads/get-a-screen.png",
+    "duration": 12000
+  },
+  {
+    "type": "image",
     "url": "ads/IMG_1666.JPEG",
     "duration": 10000
+  },
+  {
+    "type": "events",
+    "duration": 15000
   },
   {
     "type": "image",
@@ -92,6 +118,11 @@
   },
   {
     "type": "image",
+    "url": "ads/follow-us.png",
+    "duration": 10000
+  },
+  {
+    "type": "image",
     "url": "ads/IMG_1671.JPEG",
     "duration": 10000
   },
@@ -101,19 +132,21 @@
     "duration": 10000
   },
   {
-    "type": "image",
-    "url": "ads/book-now.png",
-    "duration": 12000
-  },
-  {
-    "type": "image",
-    "url": "ads/get-a-screen.png",
+    "type": "weather",
+    "location": "Springfield, MO",
+    "latitude": 37.2090,
+    "longitude": -93.2923,
     "duration": 12000
   },
   {
     "type": "image",
     "url": "ads/IMG_1734.JPEG",
     "duration": 10000
+  },
+  {
+    "type": "image",
+    "url": "ads/booking-qr.png",
+    "duration": 12000
   },
   {
     "type": "image",
@@ -127,8 +160,17 @@
   },
   {
     "type": "image",
+    "url": "ads/get-a-screen.png",
+    "duration": 12000
+  },
+  {
+    "type": "image",
     "url": "ads/IMG_2102.JPEG",
     "duration": 10000
+  },
+  {
+    "type": "events",
+    "duration": 15000
   },
   {
     "type": "image",
@@ -142,18 +184,13 @@
   },
   {
     "type": "image",
-    "url": "ads/IMG_2224.JPEG",
+    "url": "ads/thank-you.png",
     "duration": 10000
   },
   {
     "type": "image",
-    "url": "ads/google-review.png",
-    "duration": 12000
-  },
-  {
-    "type": "image",
-    "url": "ads/get-a-screen.png",
-    "duration": 12000
+    "url": "ads/IMG_2224.JPEG",
+    "duration": 10000
   },
   {
     "type": "image",
@@ -161,9 +198,21 @@
     "duration": 10000
   },
   {
+    "type": "weather",
+    "location": "Springfield, MO",
+    "latitude": 37.2090,
+    "longitude": -93.2923,
+    "duration": 12000
+  },
+  {
     "type": "image",
     "url": "ads/IMG_2334.JPEG",
     "duration": 10000
+  },
+  {
+    "type": "image",
+    "url": "ads/get-a-screen.png",
+    "duration": 12000
   },
   {
     "type": "image",
@@ -177,8 +226,17 @@
   },
   {
     "type": "image",
+    "url": "ads/book-now.png",
+    "duration": 12000
+  },
+  {
+    "type": "image",
     "url": "ads/IMG_2363.JPEG",
     "duration": 10000
+  },
+  {
+    "type": "events",
+    "duration": 15000
   },
   {
     "type": "image",
@@ -192,12 +250,7 @@
   },
   {
     "type": "image",
-    "url": "ads/follow-us.png",
-    "duration": 10000
-  },
-  {
-    "type": "image",
-    "url": "ads/get-a-screen.png",
+    "url": "ads/google-review.png",
     "duration": 12000
   },
   {
@@ -212,8 +265,20 @@
   },
   {
     "type": "image",
+    "url": "ads/get-a-screen.png",
+    "duration": 12000
+  },
+  {
+    "type": "image",
     "url": "ads/a0fa55cd8e47325fe2df3ddfde25f419.JPEG",
     "duration": 10000
+  },
+  {
+    "type": "weather",
+    "location": "Springfield, MO",
+    "latitude": 37.2090,
+    "longitude": -93.2923,
+    "duration": 12000
   },
   {
     "type": "image",
@@ -227,13 +292,27 @@
   },
   {
     "type": "image",
+    "url": "ads/follow-us.png",
+    "duration": 10000
+  },
+  {
+    "type": "image",
     "url": "ads/att.VEtzEnV1QZwXyJMVx0iOPO4faUJTFjNvMBhHTzoNx-4.JPEG",
     "duration": 10000
+  },
+  {
+    "type": "events",
+    "duration": 15000
   },
   {
     "type": "image",
     "url": "ads/att.oNzlZzd82Y2Qp_z00iUECV7SvbS_GsfKIec7TW6SAhs.JPEG",
     "duration": 10000
+  },
+  {
+    "type": "image",
+    "url": "ads/get-a-screen.png",
+    "duration": 12000
   },
   {
     "type": "image",
@@ -247,8 +326,20 @@
   },
   {
     "type": "image",
+    "url": "ads/booking-qr.png",
+    "duration": 12000
+  },
+  {
+    "type": "image",
     "url": "ads/f832f2ff103c804973c09fa1a1a29052.JPEG",
     "duration": 10000
+  },
+  {
+    "type": "weather",
+    "location": "Springfield, MO",
+    "latitude": 37.2090,
+    "longitude": -93.2923,
+    "duration": 12000
   },
   {
     "type": "image",
@@ -257,18 +348,12 @@
   },
   {
     "type": "image",
-    "url": "ads/booking-qr.png",
-    "duration": 12000
-  },
-  {
-    "type": "image",
-    "url": "ads/get-a-screen.png",
-    "duration": 12000
-  },
-  {
-    "type": "image",
     "url": "ads/thank-you.png",
     "duration": 10000
+  },
+  {
+    "type": "events",
+    "duration": 15000
   },
   {
     "type": "image",
