@@ -1,3 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+html, body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: black;
+  font-family: Arial, sans-serif;
+}
+
+#screen {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  background: black;
+}
+
+.title {
+  font-size: 64px;
+}
+
+.subtitle {
+  font-size: 30px;
+  margin-top: 25px;
+}
+
+.ad-image,
+.ad-video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: contain;
+  background: black;
+  display: block;
+}
+</style>
+</head>
+
+<body>
+
+<div id="screen"></div>
+
 <script>
 
 let playlist = [];
@@ -23,7 +74,6 @@ async function loadPlaylist() {
   } catch (error) {
     console.error("Playlist load failed:", error);
 
-    // Keep the last good playlist running if one already exists.
     if (!playlist.length) {
       document.getElementById("screen").innerHTML =
         "<div><div class='title'>PLAYLIST ERROR</div><div class='subtitle'>" +
@@ -79,6 +129,11 @@ function showSlide() {
 
     img.addEventListener("error", () => {
       console.error("Image failed:", item.url);
+
+      if (slideTimer) {
+        clearTimeout(slideTimer);
+      }
+
       slideTimer = setTimeout(nextSlide, 1500);
     });
 
@@ -107,6 +162,11 @@ function showSlide() {
 
     video.addEventListener("error", () => {
       console.error("Video failed:", item.url);
+
+      if (slideTimer) {
+        clearTimeout(slideTimer);
+      }
+
       slideTimer = setTimeout(nextSlide, 1500);
     });
 
@@ -117,6 +177,11 @@ function showSlide() {
     if (playPromise !== undefined) {
       playPromise.catch(error => {
         console.error("Video autoplay failed:", error);
+
+        if (slideTimer) {
+          clearTimeout(slideTimer);
+        }
+
         slideTimer = setTimeout(nextSlide, 1500);
       });
     }
@@ -150,7 +215,6 @@ function showSlide() {
 
 async function start() {
   await loadPlaylist();
-
   showSlide();
 
   setInterval(async () => {
@@ -161,3 +225,6 @@ async function start() {
 start();
 
 </script>
+
+</body>
+</html>
