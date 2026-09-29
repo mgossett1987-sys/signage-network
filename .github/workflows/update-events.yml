@@ -1,0 +1,57 @@
+name: Update family events
+
+on:
+  schedule:
+    # Every six hours, away from the busy top of the hour (UTC).
+    - cron: '17 */6 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - scripts/**
+      - tests/**
+      - .github/workflows/update-events.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-family-events
+  cancel-in-progress: false
+
+jobs:
+  update:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: scripts/requirements-events.txt
+      - name: Install calendar parser
+        run: python -m pip install -r scripts/requirements-events.txt
+      - name: Test offline safety cases
+        run: python -m unittest discover -s tests -v
+      - name: Refresh public events
+        run: python scripts/update_events.py
+      - name: Commit changed events only
+        shell: bash
+        run: |
+          if git diff --quiet -- events.json; then
+            echo "No event content changed."
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- events.json
+          git commit -m 'Update upcoming family events'
+          # Never force push. Rebase unrelated concurrent edits; conflicts fail
+          # safely and the next scheduled run will collect again.
+          git pull --rebase origin main
+          git push origin HEAD:main
