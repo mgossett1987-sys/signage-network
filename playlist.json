@@ -1,9 +1,8 @@
 [
   {
-    "type": "text",
-    "title": "EXTRA CARE HAIR CO.",
-    "subtitle": "Welcome • Relax • Rebook Before You Leave",
-    "duration": 8000
+    "type": "image",
+    "url": "ads/welcome.png",
+    "duration": 10000
   },
   {
     "type": "image",
@@ -11,14 +10,13 @@
     "duration": 10000
   },
   {
-    "type": "text",
-    "title": "LOVE YOUR LOOK?",
-    "subtitle": "Ask about booking your next appointment before you leave.",
-    "duration": 8000
-  },
-  {
     "type": "video",
     "url": "ads/sample-5s.mp4"
+  },
+  {
+    "type": "image",
+    "url": "ads/book-now.png",
+    "duration": 12000
   },
   {
     "type": "image",
@@ -27,13 +25,23 @@
   },
   {
     "type": "image",
+    "url": "ads/google-review.png",
+    "duration": 12000
+  },
+  {
+    "type": "image",
     "url": "ads/outsidephoto.webp",
     "duration": 10000
   },
   {
-    "type": "text",
-    "title": "EXTRA CARE HAIR CO.",
-    "subtitle": "Thank you for supporting a local business.",
+    "type": "image",
+    "url": "ads/follow-us.png",
+    "duration": 10000
+  },
+  {
+    "type": "image",
+    "url": "ads/thank-you.png",
     "duration": 8000
   }
+]
 ]
