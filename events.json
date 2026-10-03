@@ -1,21 +1,7 @@
 {
   "title": "Family Fun Around The Area",
-  "updated": "2026-10-03T11:28:41-05:00",
+  "updated": "2026-10-03T16:25:02-05:00",
   "events": [
-    {
-      "title": "Great Grains: Its Breakfast Time!",
-      "date": "2026-10-03",
-      "time": "1:00 PM",
-      "location": "Midtown Carnegie Branch Library - Community Room - Upper Level (60)",
-      "source": "Springfield-Greene County Library"
-    },
-    {
-      "title": "Young Historians Club",
-      "date": "2026-10-03",
-      "time": "2:00 PM",
-      "location": "Library Center - Annie Busch Community Room (100)",
-      "source": "Springfield-Greene County Library"
-    },
     {
       "title": "Country Dance ft. Heart of Gold",
       "date": "2026-10-03",
@@ -29,6 +15,20 @@
       "time": "12:00 PM",
       "location": "Rutledge-Wilson Farm Park - 3825 W Farm Road 146 Springfield MO 65802",
       "source": "Springfield-Greene County Park Board"
+    },
+    {
+      "title": "Fall Gigs in the Garden Concert Series",
+      "date": "2026-10-04",
+      "time": "2:00 PM",
+      "location": "Springfield Botanical Gardens - 2400 S Scenic Avenue Springfield MO 65807",
+      "source": "Springfield-Greene County Park Board"
+    },
+    {
+      "title": "Pajama Storytime",
+      "date": "2026-10-05",
+      "time": "6:00 PM",
+      "location": "Library Center - Story Hour Room (45)",
+      "source": "Springfield-Greene County Library"
     }
   ]
 }
