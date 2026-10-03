@@ -1,34 +1,34 @@
 {
   "title": "Family Fun Around The Area",
-  "updated": "2026-10-02T17:19:59-05:00",
+  "updated": "2026-10-03T11:28:41-05:00",
   "events": [
     {
-      "title": "Learn to Grow: Build a Terrarium",
+      "title": "Great Grains: Its Breakfast Time!",
       "date": "2026-10-03",
-      "time": "9:00 AM",
-      "location": "Springfield Botanical Gardens - 2400 S Scenic Avenue Springfield MO 65807",
-      "source": "Springfield-Greene County Park Board"
+      "time": "1:00 PM",
+      "location": "Midtown Carnegie Branch Library - Community Room - Upper Level (60)",
+      "source": "Springfield-Greene County Library"
     },
     {
-      "title": "Fall Native Plant Sale",
+      "title": "Young Historians Club",
       "date": "2026-10-03",
-      "time": "10:00 AM",
-      "location": "Springfield Botanical Gardens - 2400 S Scenic Avenue Springfield MO 65807",
+      "time": "2:00 PM",
+      "location": "Library Center - Annie Busch Community Room (100)",
+      "source": "Springfield-Greene County Library"
+    },
+    {
+      "title": "Country Dance ft. Heart of Gold",
+      "date": "2026-10-03",
+      "time": "7:00 PM",
+      "location": "Northview Center - 305 E Talmage Springfield MO 65803",
       "source": "Springfield-Greene County Park Board"
     },
     {
       "title": "Harvest Fest presented by Vital Farms",
-      "date": "2026-10-03",
-      "time": "11:00 AM",
+      "date": "2026-10-04",
+      "time": "12:00 PM",
       "location": "Rutledge-Wilson Farm Park - 3825 W Farm Road 146 Springfield MO 65802",
       "source": "Springfield-Greene County Park Board"
-    },
-    {
-      "title": "Racing to Read Storytime",
-      "date": "2026-10-03",
-      "time": "11:00 AM",
-      "location": "Library Station - Story Hour Room (30)",
-      "source": "Springfield-Greene County Library"
     }
   ]
 }
