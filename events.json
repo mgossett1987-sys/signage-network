@@ -1,21 +1,7 @@
 {
   "title": "Family Fun Around The Area",
-  "updated": "2026-10-04T01:01:15-05:00",
+  "updated": "2026-10-04T16:36:09-05:00",
   "events": [
-    {
-      "title": "Harvest Fest presented by Vital Farms",
-      "date": "2026-10-04",
-      "time": "12:00 PM",
-      "location": "Rutledge-Wilson Farm Park - 3825 W Farm Road 146 Springfield MO 65802",
-      "source": "Springfield-Greene County Park Board"
-    },
-    {
-      "title": "Fall Gigs in the Garden Concert Series",
-      "date": "2026-10-04",
-      "time": "2:00 PM",
-      "location": "Springfield Botanical Gardens - 2400 S Scenic Avenue Springfield MO 65807",
-      "source": "Springfield-Greene County Park Board"
-    },
     {
       "title": "Pajama Storytime",
       "date": "2026-10-05",
@@ -29,6 +15,20 @@
       "time": "9:00 AM",
       "location": "Rutledge-Wilson Farm Park - 3825 W Farm Road 146 Springfield MO 65802",
       "source": "Springfield-Greene County Park Board"
+    },
+    {
+      "title": "Tiny Tots Storytime",
+      "date": "2026-10-06",
+      "time": "9:30 AM",
+      "location": "Library Center - Story Hour Room (45)",
+      "source": "Springfield-Greene County Library"
+    },
+    {
+      "title": "Socktober Storytime",
+      "date": "2026-10-06",
+      "time": "10:00 AM",
+      "location": "Republic Branch Library",
+      "source": "Springfield-Greene County Library"
     }
   ]
 }
