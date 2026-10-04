@@ -1,14 +1,7 @@
 {
   "title": "Family Fun Around The Area",
-  "updated": "2026-10-03T16:25:02-05:00",
+  "updated": "2026-10-04T01:01:15-05:00",
   "events": [
-    {
-      "title": "Country Dance ft. Heart of Gold",
-      "date": "2026-10-03",
-      "time": "7:00 PM",
-      "location": "Northview Center - 305 E Talmage Springfield MO 65803",
-      "source": "Springfield-Greene County Park Board"
-    },
     {
       "title": "Harvest Fest presented by Vital Farms",
       "date": "2026-10-04",
@@ -29,6 +22,13 @@
       "time": "6:00 PM",
       "location": "Library Center - Story Hour Room (45)",
       "source": "Springfield-Greene County Library"
+    },
+    {
+      "title": "Pumpkin Patch Presented by BluCurrent Credit Union",
+      "date": "2026-10-06",
+      "time": "9:00 AM",
+      "location": "Rutledge-Wilson Farm Park - 3825 W Farm Road 146 Springfield MO 65802",
+      "source": "Springfield-Greene County Park Board"
     }
   ]
 }
