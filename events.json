@@ -1,32 +1,32 @@
 {
   "title": "Family Fun Around The Area",
-  "updated": "2026-10-08T18:26:01-05:00",
+  "updated": "2026-10-09T13:24:36-05:00",
   "events": [
     {
-      "title": "Pumpkin Patch Presented by BluCurrent Credit Union",
-      "date": "2026-10-09",
-      "time": "9:00 AM",
+      "title": "Reading Pals",
+      "date": "2026-10-10",
+      "time": "10:00 AM",
+      "location": "Strafford Branch Library - Community Room (40)",
+      "source": "Springfield-Greene County Library"
+    },
+    {
+      "title": "Harvest Fest presented by Vital Farms",
+      "date": "2026-10-10",
+      "time": "11:00 AM",
       "location": "Rutledge-Wilson Farm Park - 3825 W Farm Road 146 Springfield MO 65802",
       "source": "Springfield-Greene County Park Board"
     },
     {
-      "title": "Tiny Tots Storytime",
-      "date": "2026-10-09",
-      "time": "9:30 AM",
-      "location": "Library Center - Story Hour Room (45)",
+      "title": "Racing to Read Storytime",
+      "date": "2026-10-10",
+      "time": "11:00 AM",
+      "location": "Library Station - Story Hour Room (30)",
       "source": "Springfield-Greene County Library"
     },
     {
-      "title": "The Pretenders",
-      "date": "2026-10-09",
-      "time": "10:00 AM",
-      "location": "Schweitzer Brentwood Branch Library - Community Room (100)",
-      "source": "Springfield-Greene County Library"
-    },
-    {
-      "title": "Tiny Tots Socktober Storytime",
-      "date": "2026-10-09",
-      "time": "10:00 AM",
+      "title": "Socktober Storytime",
+      "date": "2026-10-10",
+      "time": "11:00 AM",
       "location": "Library Station",
       "source": "Springfield-Greene County Library"
     }
