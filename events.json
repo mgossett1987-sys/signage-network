@@ -1,33 +1,33 @@
 {
   "title": "Family Fun Around The Area",
-  "updated": "2026-10-13T09:21:22-05:00",
+  "updated": "2026-10-13T17:53:29-05:00",
   "events": [
     {
-      "title": "Tiny Tots Storytime",
+      "title": "Pajama Storytime",
       "date": "2026-10-13",
+      "time": "6:30 PM",
+      "location": "Library Station - Story Hour Room (30)",
+      "source": "Springfield-Greene County Library"
+    },
+    {
+      "title": "Pumpkin Patch Presented by BluCurrent Credit Union",
+      "date": "2026-10-14",
+      "time": "9:00 AM",
+      "location": "Rutledge-Wilson Farm Park - 3825 W Farm Road 146 Springfield MO 65802",
+      "source": "Springfield-Greene County Park Board"
+    },
+    {
+      "title": "Baby Book Club",
+      "date": "2026-10-14",
       "time": "9:30 AM",
       "location": "Library Center - Story Hour Room (45)",
       "source": "Springfield-Greene County Library"
     },
     {
-      "title": "Spooky Cricut Stickers",
-      "date": "2026-10-13",
-      "time": "10:00 AM",
-      "location": "Republic Branch Library - Maker Space",
-      "source": "Springfield-Greene County Library"
-    },
-    {
-      "title": "Stories in the Park",
-      "date": "2026-10-13",
+      "title": "Racing to Read Storytime",
+      "date": "2026-10-14",
       "time": "10:00 AM",
       "location": "Republic Branch Library",
-      "source": "Springfield-Greene County Library"
-    },
-    {
-      "title": "Tiny Tots Storytime",
-      "date": "2026-10-13",
-      "time": "10:00 AM",
-      "location": "Library Station - Story Hour Room (30)",
       "source": "Springfield-Greene County Library"
     }
   ]
