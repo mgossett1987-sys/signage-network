@@ -1,14 +1,7 @@
 {
   "title": "Family Fun Around The Area",
-  "updated": "2026-10-16T23:37:41-05:00",
+  "updated": "2026-10-17T10:42:02-05:00",
   "events": [
-    {
-      "title": "Spooky Cricut Stickers",
-      "date": "2026-10-17",
-      "time": "10:00 AM",
-      "location": "Republic Branch Library - Maker Space",
-      "source": "Springfield-Greene County Library"
-    },
     {
       "title": "Fall 2026 Farm Park Makers’ Market",
       "date": "2026-10-17",
@@ -28,6 +21,13 @@
       "date": "2026-10-17",
       "time": "11:00 AM",
       "location": "Library Station - Story Hour Room (30)",
+      "source": "Springfield-Greene County Library"
+    },
+    {
+      "title": "Spooky Decorations Crafternoon",
+      "date": "2026-10-18",
+      "time": "11:00 AM",
+      "location": "Library Center - Story Hour Room (45)",
       "source": "Springfield-Greene County Library"
     }
   ]
