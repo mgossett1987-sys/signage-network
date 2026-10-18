@@ -1,33 +1,33 @@
 {
   "title": "Family Fun Around The Area",
-  "updated": "2026-10-17T15:42:49-05:00",
+  "updated": "2026-10-18T15:52:34-05:00",
   "events": [
-    {
-      "title": "Spooky Decorations Crafternoon",
-      "date": "2026-10-18",
-      "time": "11:00 AM",
-      "location": "Library Center - Story Hour Room (45)",
-      "source": "Springfield-Greene County Library"
-    },
-    {
-      "title": "Harvest Fest presented by Vital Farms",
-      "date": "2026-10-18",
-      "time": "12:00 PM",
-      "location": "Rutledge-Wilson Farm Park - 3825 W Farm Road 146 Springfield MO 65802",
-      "source": "Springfield-Greene County Park Board"
-    },
-    {
-      "title": "Fall Gigs in the Garden Concert Series",
-      "date": "2026-10-18",
-      "time": "2:00 PM",
-      "location": "Springfield Botanical Gardens - 2400 S Scenic Avenue Springfield MO 65807",
-      "source": "Springfield-Greene County Park Board"
-    },
     {
       "title": "Kindergarten Camp",
       "date": "2026-10-19",
       "time": "2:00 PM",
       "location": "Library Station - Story Hour Room (30)",
+      "source": "Springfield-Greene County Library"
+    },
+    {
+      "title": "Art Exploration",
+      "date": "2026-10-19",
+      "time": "3:00 PM",
+      "location": "Fair Grove Branch Library",
+      "source": "Springfield-Greene County Library"
+    },
+    {
+      "title": "Pajama Storytime",
+      "date": "2026-10-19",
+      "time": "6:00 PM",
+      "location": "Library Center - Story Hour Room (45)",
+      "source": "Springfield-Greene County Library"
+    },
+    {
+      "title": "Socktober Storytime",
+      "date": "2026-10-19",
+      "time": "6:00 PM",
+      "location": "Library Center",
       "source": "Springfield-Greene County Library"
     }
   ]
