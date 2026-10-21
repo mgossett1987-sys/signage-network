@@ -1,33 +1,33 @@
 {
   "title": "Family Fun Around The Area",
-  "updated": "2026-10-20T23:58:35-05:00",
+  "updated": "2026-10-21T12:20:22-05:00",
   "events": [
     {
-      "title": "Homeschool Field Trip Day",
+      "title": "Preschool Playtime",
       "date": "2026-10-21",
-      "time": "9:00 AM",
-      "location": "Rutledge-Wilson Farm Park - 3825 W Farm Road 146 Springfield MO 65802",
-      "source": "Springfield-Greene County Park Board"
+      "time": "6:00 PM",
+      "location": "Library Center - Story Hour Room (45)",
+      "source": "Springfield-Greene County Library"
     },
     {
       "title": "Pumpkin Patch Presented by BluCurrent Credit Union",
-      "date": "2026-10-21",
+      "date": "2026-10-22",
       "time": "9:00 AM",
       "location": "Rutledge-Wilson Farm Park - 3825 W Farm Road 146 Springfield MO 65802",
       "source": "Springfield-Greene County Park Board"
     },
     {
       "title": "Racing to Read Storytime",
-      "date": "2026-10-21",
+      "date": "2026-10-22",
       "time": "10:00 AM",
-      "location": "Republic Branch Library",
+      "location": "Midtown Carnegie Branch Library",
       "source": "Springfield-Greene County Library"
     },
     {
-      "title": "Tiny Tots Socktober Storytime",
-      "date": "2026-10-21",
+      "title": "Racing to Read Storytime",
+      "date": "2026-10-22",
       "time": "10:00 AM",
-      "location": "Schweitzer Brentwood Branch Library",
+      "location": "Strafford Branch Library - Community Room (40)",
       "source": "Springfield-Greene County Library"
     }
   ]
