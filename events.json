@@ -1,14 +1,7 @@
 {
   "title": "Family Fun Around The Area",
-  "updated": "2026-10-21T12:20:22-05:00",
+  "updated": "2026-10-21T23:59:57-05:00",
   "events": [
-    {
-      "title": "Preschool Playtime",
-      "date": "2026-10-21",
-      "time": "6:00 PM",
-      "location": "Library Center - Story Hour Room (45)",
-      "source": "Springfield-Greene County Library"
-    },
     {
       "title": "Pumpkin Patch Presented by BluCurrent Credit Union",
       "date": "2026-10-22",
@@ -29,6 +22,13 @@
       "time": "10:00 AM",
       "location": "Strafford Branch Library - Community Room (40)",
       "source": "Springfield-Greene County Library"
+    },
+    {
+      "title": "Pumpkin Patch Presented by BluCurrent Credit Union",
+      "date": "2026-10-23",
+      "time": "9:00 AM",
+      "location": "Rutledge-Wilson Farm Park - 3825 W Farm Road 146 Springfield MO 65802",
+      "source": "Springfield-Greene County Park Board"
     }
   ]
 }
