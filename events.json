@@ -1,14 +1,7 @@
 {
   "title": "Family Fun Around The Area",
-  "updated": "2026-10-23T12:15:29-05:00",
+  "updated": "2026-10-23T16:29:51-05:00",
   "events": [
-    {
-      "title": "Fall Build-O-Rama",
-      "date": "2026-10-23",
-      "time": "1:00 PM",
-      "location": "Library Station - Story Hour Room (30)",
-      "source": "Springfield-Greene County Library"
-    },
     {
       "title": "Pumpkin Roll 5K",
       "date": "2026-10-24",
@@ -29,6 +22,13 @@
       "time": "10:00 AM",
       "location": "Strafford Branch Library - Community Room (40)",
       "source": "Springfield-Greene County Library"
+    },
+    {
+      "title": "Halloween Fest",
+      "date": "2026-10-24",
+      "time": "11:00 AM",
+      "location": "Springfield Botanical Gardens - 2400 S Scenic Avenue Springfield MO 65807",
+      "source": "Springfield-Greene County Park Board"
     }
   ]
 }
