@@ -1,33 +1,33 @@
 {
   "title": "Family Fun Around The Area",
-  "updated": "2026-10-22T12:17:37-05:00",
+  "updated": "2026-10-23T12:15:29-05:00",
   "events": [
     {
-      "title": "Pumpkin Patch Presented by BluCurrent Credit Union",
+      "title": "Fall Build-O-Rama",
       "date": "2026-10-23",
-      "time": "9:00 AM",
+      "time": "1:00 PM",
+      "location": "Library Station - Story Hour Room (30)",
+      "source": "Springfield-Greene County Library"
+    },
+    {
+      "title": "Pumpkin Roll 5K",
+      "date": "2026-10-24",
+      "time": "8:00 AM",
       "location": "Rutledge-Wilson Farm Park - 3825 W Farm Road 146 Springfield MO 65802",
       "source": "Springfield-Greene County Park Board"
     },
     {
-      "title": "Tiny Tots Socktober Storytime",
-      "date": "2026-10-23",
-      "time": "9:30 AM",
-      "location": "Library Center",
-      "source": "Springfield-Greene County Library"
-    },
-    {
-      "title": "Tiny Tots Storytime",
-      "date": "2026-10-23",
-      "time": "9:30 AM",
-      "location": "Library Center - Story Hour Room (45)",
-      "source": "Springfield-Greene County Library"
-    },
-    {
-      "title": "Tiny Tots Storytime",
-      "date": "2026-10-23",
+      "title": "Nature Adventures",
+      "date": "2026-10-24",
       "time": "10:00 AM",
-      "location": "Library Station - Story Hour Room (30)",
+      "location": "Republic Branch Library - Friends of the Library Auditorium (150)",
+      "source": "Springfield-Greene County Library"
+    },
+    {
+      "title": "Storybook Pumpkin Patch",
+      "date": "2026-10-24",
+      "time": "10:00 AM",
+      "location": "Strafford Branch Library - Community Room (40)",
       "source": "Springfield-Greene County Library"
     }
   ]
