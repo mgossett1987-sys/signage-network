@@ -1,14 +1,7 @@
 {
   "title": "Family Fun Around The Area",
-  "updated": "2026-10-24T11:03:22-05:00",
+  "updated": "2026-10-24T15:57:01-05:00",
   "events": [
-    {
-      "title": "Mark Twain Book Club",
-      "date": "2026-10-24",
-      "time": "2:00 PM",
-      "location": "Library Station - Story Hour Room (30)",
-      "source": "Springfield-Greene County Library"
-    },
     {
       "title": "Night at the Haunted Library",
       "date": "2026-10-24",
@@ -29,6 +22,13 @@
       "time": "2:00 PM",
       "location": "Springfield Botanical Gardens - 2400 S Scenic Avenue Springfield MO 65807",
       "source": "Springfield-Greene County Park Board"
+    },
+    {
+      "title": "Popcorn & Pajamas!",
+      "date": "2026-10-26",
+      "time": "2:00 PM",
+      "location": "Ash Grove Branch Library - Community Room (25)",
+      "source": "Springfield-Greene County Library"
     }
   ]
 }
