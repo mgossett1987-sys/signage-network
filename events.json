@@ -1,32 +1,32 @@
 {
   "title": "Family Fun Around The Area",
-  "updated": "2026-10-23T16:29:51-05:00",
+  "updated": "2026-10-24T11:03:22-05:00",
   "events": [
     {
-      "title": "Pumpkin Roll 5K",
+      "title": "Mark Twain Book Club",
       "date": "2026-10-24",
-      "time": "8:00 AM",
+      "time": "2:00 PM",
+      "location": "Library Station - Story Hour Room (30)",
+      "source": "Springfield-Greene County Library"
+    },
+    {
+      "title": "Night at the Haunted Library",
+      "date": "2026-10-24",
+      "time": "7:00 PM",
+      "location": "Midtown Carnegie Branch Library",
+      "source": "Springfield-Greene County Library"
+    },
+    {
+      "title": "Harvest Fest presented by Vital Farms",
+      "date": "2026-10-25",
+      "time": "12:00 PM",
       "location": "Rutledge-Wilson Farm Park - 3825 W Farm Road 146 Springfield MO 65802",
       "source": "Springfield-Greene County Park Board"
     },
     {
-      "title": "Nature Adventures",
-      "date": "2026-10-24",
-      "time": "10:00 AM",
-      "location": "Republic Branch Library - Friends of the Library Auditorium (150)",
-      "source": "Springfield-Greene County Library"
-    },
-    {
-      "title": "Storybook Pumpkin Patch",
-      "date": "2026-10-24",
-      "time": "10:00 AM",
-      "location": "Strafford Branch Library - Community Room (40)",
-      "source": "Springfield-Greene County Library"
-    },
-    {
-      "title": "Halloween Fest",
-      "date": "2026-10-24",
-      "time": "11:00 AM",
+      "title": "Fall Gigs in the Garden Concert Series",
+      "date": "2026-10-25",
+      "time": "2:00 PM",
       "location": "Springfield Botanical Gardens - 2400 S Scenic Avenue Springfield MO 65807",
       "source": "Springfield-Greene County Park Board"
     }
