@@ -1,14 +1,7 @@
 {
   "title": "Family Fun Around The Area",
-  "updated": "2026-10-24T15:57:01-05:00",
+  "updated": "2026-10-24T23:53:12-05:00",
   "events": [
-    {
-      "title": "Night at the Haunted Library",
-      "date": "2026-10-24",
-      "time": "7:00 PM",
-      "location": "Midtown Carnegie Branch Library",
-      "source": "Springfield-Greene County Library"
-    },
     {
       "title": "Harvest Fest presented by Vital Farms",
       "date": "2026-10-25",
@@ -28,6 +21,13 @@
       "date": "2026-10-26",
       "time": "2:00 PM",
       "location": "Ash Grove Branch Library - Community Room (25)",
+      "source": "Springfield-Greene County Library"
+    },
+    {
+      "title": "Bats of Missouri",
+      "date": "2026-10-26",
+      "time": "4:30 PM",
+      "location": "Fair Grove Branch Library",
       "source": "Springfield-Greene County Library"
     }
   ]
