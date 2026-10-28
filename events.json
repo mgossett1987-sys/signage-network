@@ -1,33 +1,33 @@
 {
   "title": "Family Fun Around The Area",
-  "updated": "2026-10-28T00:53:13-05:00",
+  "updated": "2026-10-28T17:41:02-05:00",
   "events": [
     {
-      "title": "Mark Twain Book Club: Homeschool Edition",
-      "date": "2026-10-28",
+      "title": "Frightfully Fun Storytime",
+      "date": "2026-10-29",
       "time": "10:00 AM",
-      "location": "Library Station - Story Hour Room (30)",
+      "location": "Strafford Branch Library",
+      "source": "Springfield-Greene County Library"
+    },
+    {
+      "title": "Not-So-Scary Storytime",
+      "date": "2026-10-29",
+      "time": "10:00 AM",
+      "location": "Midtown Carnegie Branch Library",
       "source": "Springfield-Greene County Library"
     },
     {
       "title": "Racing to Read Storytime",
-      "date": "2026-10-28",
+      "date": "2026-10-29",
       "time": "10:00 AM",
-      "location": "Republic Branch Library",
-      "source": "Springfield-Greene County Library"
-    },
-    {
-      "title": "Tiny Tots Storytime",
-      "date": "2026-10-28",
-      "time": "10:00 AM",
-      "location": "Schweitzer Brentwood Branch Library - Community Room (100)",
+      "location": "Midtown Carnegie Branch Library",
       "source": "Springfield-Greene County Library"
     },
     {
       "title": "Racing to Read Storytime",
-      "date": "2026-10-28",
-      "time": "10:30 AM",
-      "location": "Ash Grove Branch Library - Community Room (25)",
+      "date": "2026-10-29",
+      "time": "10:00 AM",
+      "location": "Strafford Branch Library - Community Room (40)",
       "source": "Springfield-Greene County Library"
     }
   ]
