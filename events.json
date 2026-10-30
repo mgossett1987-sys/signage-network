@@ -1,33 +1,33 @@
 {
   "title": "Family Fun Around The Area",
-  "updated": "2026-10-29T17:50:30-05:00",
+  "updated": "2026-10-30T17:27:32-05:00",
   "events": [
     {
-      "title": "Tiny Tots Storytime",
+      "title": "Spooky Stuffie Sleepover",
       "date": "2026-10-30",
-      "time": "9:30 AM",
-      "location": "Library Center - Story Hour Room (45)",
+      "time": "6:00 PM",
+      "location": "Schweitzer Brentwood Branch Library - Community Room (100)",
       "source": "Springfield-Greene County Library"
     },
     {
-      "title": "Tiny Tots Storytime",
-      "date": "2026-10-30",
+      "title": "Halloween Storytime",
+      "date": "2026-10-31",
       "time": "10:00 AM",
-      "location": "Library Station - Story Hour Room (30)",
+      "location": "Library Center - Hatch Auditorium (500)",
       "source": "Springfield-Greene County Library"
     },
     {
-      "title": "Racing to Read Storytime",
-      "date": "2026-10-30",
-      "time": "10:30 AM",
-      "location": "Library Center - Story Hour Room (45)",
+      "title": "Spooky Stuffie Sleepover",
+      "date": "2026-10-31",
+      "time": "10:00 AM",
+      "location": "Schweitzer Brentwood Branch Library - Community Room (100)",
       "source": "Springfield-Greene County Library"
     },
     {
-      "title": "Racing to Read Storytime",
-      "date": "2026-10-30",
-      "time": "11:15 AM",
-      "location": "Library Station - Story Hour Room (30)",
+      "title": "Halloween Storytime",
+      "date": "2026-10-31",
+      "time": "11:00 AM",
+      "location": "Library Center - Hatch Auditorium (500)",
       "source": "Springfield-Greene County Library"
     }
   ]
