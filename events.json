@@ -1,33 +1,33 @@
 {
   "title": "Family Fun Around The Area",
-  "updated": "2026-10-31T16:42:19-05:00",
+  "updated": "2026-11-02T15:46:03-06:00",
   "events": [
-    {
-      "title": "Glowforge Handprint Turkeys for Kids",
-      "date": "2026-11-02",
-      "time": "10:00 AM",
-      "location": "Midtown Carnegie Branch Library - Maker Space",
-      "source": "Springfield-Greene County Library"
-    },
-    {
-      "title": "Reading Fest: Cozy Book Break",
-      "date": "2026-11-02",
-      "time": "10:00 AM",
-      "location": "Library Center - Story Hour Room (45)",
-      "source": "Springfield-Greene County Library"
-    },
-    {
-      "title": "Reading Fest: Crafts, Puzzles & Audiobooks",
-      "date": "2026-11-02",
-      "time": "1:00 PM",
-      "location": "Library Center - Story Hour Room (45)",
-      "source": "Springfield-Greene County Library"
-    },
     {
       "title": "Bringing Narnia to Life",
       "date": "2026-11-02",
       "time": "4:30 PM",
       "location": "Library Center - Hatch Auditorium (500)",
+      "source": "Springfield-Greene County Library"
+    },
+    {
+      "title": "Pajama Storytime",
+      "date": "2026-11-02",
+      "time": "6:00 PM",
+      "location": "Library Center - Story Hour Room (45)",
+      "source": "Springfield-Greene County Library"
+    },
+    {
+      "title": "Tiny Tots Storytime",
+      "date": "2026-11-03",
+      "time": "9:30 AM",
+      "location": "Library Center - Story Hour Room (45)",
+      "source": "Springfield-Greene County Library"
+    },
+    {
+      "title": "Dino Tales",
+      "date": "2026-11-03",
+      "time": "10:00 AM",
+      "location": "Republic Branch Library",
       "source": "Springfield-Greene County Library"
     }
   ]
