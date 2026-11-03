@@ -1,33 +1,33 @@
 {
   "title": "Family Fun Around The Area",
-  "updated": "2026-11-03T00:57:12-06:00",
+  "updated": "2026-11-03T13:34:27-06:00",
   "events": [
     {
-      "title": "Tiny Tots Storytime",
+      "title": "LEGO Brick Builders",
       "date": "2026-11-03",
-      "time": "9:30 AM",
-      "location": "Library Center - Story Hour Room (45)",
+      "time": "4:00 PM",
+      "location": "Willard Branch Library - Community Room (40)",
+      "source": "Springfield-Greene County Library"
+    },
+    {
+      "title": "Pajama Storytime",
+      "date": "2026-11-03",
+      "time": "6:30 PM",
+      "location": "Library Station - Story Hour Room (30)",
       "source": "Springfield-Greene County Library"
     },
     {
       "title": "Dino Tales",
-      "date": "2026-11-03",
+      "date": "2026-11-04",
       "time": "10:00 AM",
       "location": "Republic Branch Library",
       "source": "Springfield-Greene County Library"
     },
     {
       "title": "Glowforge Handprint Turkeys for Kids",
-      "date": "2026-11-03",
+      "date": "2026-11-04",
       "time": "10:00 AM",
       "location": "Midtown Carnegie Branch Library - Maker Space",
-      "source": "Springfield-Greene County Library"
-    },
-    {
-      "title": "Racing to Read Storytime",
-      "date": "2026-11-03",
-      "time": "10:00 AM",
-      "location": "Republic Branch Library",
       "source": "Springfield-Greene County Library"
     }
   ]
