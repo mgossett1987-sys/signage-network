@@ -1,33 +1,33 @@
 {
   "title": "Family Fun Around The Area",
-  "updated": "2026-11-06T00:57:57-06:00",
+  "updated": "2026-11-06T13:29:57-06:00",
   "events": [
     {
-      "title": "Tiny Tots Storytime",
-      "date": "2026-11-06",
-      "time": "9:30 AM",
-      "location": "Library Center - Story Hour Room (45)",
+      "title": "Racing to Read Storytime",
+      "date": "2026-11-07",
+      "time": "11:00 AM",
+      "location": "Library Station - Story Hour Room (30)",
+      "source": "Springfield-Greene County Library"
+    },
+    {
+      "title": "Second Sunday Concert",
+      "date": "2026-11-08",
+      "time": "2:00 PM",
+      "location": "Library Center - Hatch Auditorium (500)",
       "source": "Springfield-Greene County Library"
     },
     {
       "title": "Glowforge Handprint Turkeys for Kids",
-      "date": "2026-11-06",
+      "date": "2026-11-09",
       "time": "10:00 AM",
       "location": "Midtown Carnegie Branch Library - Maker Space",
       "source": "Springfield-Greene County Library"
     },
     {
-      "title": "Tiny Tots Storytime",
-      "date": "2026-11-06",
-      "time": "10:00 AM",
-      "location": "Library Station - Story Hour Room (30)",
-      "source": "Springfield-Greene County Library"
-    },
-    {
-      "title": "Racing to Read Storytime",
-      "date": "2026-11-06",
-      "time": "10:30 AM",
-      "location": "Library Center - Story Hour Room (45)",
+      "title": "Build-O-Rama",
+      "date": "2026-11-09",
+      "time": "2:00 PM",
+      "location": "Ash Grove Branch Library - Community Room (25)",
       "source": "Springfield-Greene County Library"
     }
   ]
