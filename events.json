@@ -1,14 +1,7 @@
 {
   "title": "Family Fun Around The Area",
-  "updated": "2026-11-05T14:04:01-06:00",
+  "updated": "2026-11-06T00:57:57-06:00",
   "events": [
-    {
-      "title": "Reading Pals",
-      "date": "2026-11-05",
-      "time": "4:30 PM",
-      "location": "Republic Branch Library - Arvest Foundation Room (10)",
-      "source": "Springfield-Greene County Library"
-    },
     {
       "title": "Tiny Tots Storytime",
       "date": "2026-11-06",
@@ -28,6 +21,13 @@
       "date": "2026-11-06",
       "time": "10:00 AM",
       "location": "Library Station - Story Hour Room (30)",
+      "source": "Springfield-Greene County Library"
+    },
+    {
+      "title": "Racing to Read Storytime",
+      "date": "2026-11-06",
+      "time": "10:30 AM",
+      "location": "Library Center - Story Hour Room (45)",
       "source": "Springfield-Greene County Library"
     }
   ]
