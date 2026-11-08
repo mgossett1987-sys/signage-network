@@ -1,14 +1,7 @@
 {
   "title": "Family Fun Around The Area",
-  "updated": "2026-11-07T15:58:07-06:00",
+  "updated": "2026-11-08T16:14:32-06:00",
   "events": [
-    {
-      "title": "Second Sunday Concert",
-      "date": "2026-11-08",
-      "time": "2:00 PM",
-      "location": "Library Center - Hatch Auditorium (500)",
-      "source": "Springfield-Greene County Library"
-    },
     {
       "title": "Glowforge Handprint Turkeys for Kids",
       "date": "2026-11-09",
@@ -28,6 +21,13 @@
       "date": "2026-11-09",
       "time": "2:00 PM",
       "location": "Willard Branch Library - Community Room (40)",
+      "source": "Springfield-Greene County Library"
+    },
+    {
+      "title": "Pajama Storytime",
+      "date": "2026-11-09",
+      "time": "6:00 PM",
+      "location": "Library Center - Story Hour Room (45)",
       "source": "Springfield-Greene County Library"
     }
   ]
