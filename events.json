@@ -1,14 +1,7 @@
 {
   "title": "Family Fun Around The Area",
-  "updated": "2026-11-09T16:29:06-06:00",
+  "updated": "2026-11-10T01:27:46-06:00",
   "events": [
-    {
-      "title": "Pajama Storytime",
-      "date": "2026-11-09",
-      "time": "6:00 PM",
-      "location": "Library Center - Story Hour Room (45)",
-      "source": "Springfield-Greene County Library"
-    },
     {
       "title": "Tiny Tots Storytime",
       "date": "2026-11-10",
@@ -28,6 +21,13 @@
       "date": "2026-11-10",
       "time": "10:00 AM",
       "location": "Midtown Carnegie Branch Library - Maker Space",
+      "source": "Springfield-Greene County Library"
+    },
+    {
+      "title": "Racing to Read Storytime",
+      "date": "2026-11-10",
+      "time": "10:00 AM",
+      "location": "Republic Branch Library",
       "source": "Springfield-Greene County Library"
     }
   ]
