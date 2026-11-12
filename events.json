@@ -1,33 +1,33 @@
 {
   "title": "Family Fun Around The Area",
-  "updated": "2026-11-11T00:41:05-06:00",
+  "updated": "2026-11-12T14:04:06-06:00",
   "events": [
     {
-      "title": "Glowforge Handprint Turkeys",
-      "date": "2026-11-12",
-      "time": "10:00 AM",
-      "location": "Republic Branch Library - Maker Space",
+      "title": "Tiny Tots Storytime",
+      "date": "2026-11-13",
+      "time": "9:30 AM",
+      "location": "Library Center - Story Hour Room (45)",
       "source": "Springfield-Greene County Library"
     },
     {
       "title": "Glowforge Handprint Turkeys for Kids",
-      "date": "2026-11-12",
+      "date": "2026-11-13",
       "time": "10:00 AM",
       "location": "Midtown Carnegie Branch Library - Maker Space",
       "source": "Springfield-Greene County Library"
     },
     {
-      "title": "Racing to Read Storytime",
-      "date": "2026-11-12",
+      "title": "The Pretenders",
+      "date": "2026-11-13",
       "time": "10:00 AM",
-      "location": "Midtown Carnegie Branch Library",
+      "location": "Schweitzer Brentwood Branch Library - Community Room (100)",
       "source": "Springfield-Greene County Library"
     },
     {
-      "title": "Racing to Read Storytime",
-      "date": "2026-11-12",
+      "title": "Tiny Tots Storytime",
+      "date": "2026-11-13",
       "time": "10:00 AM",
-      "location": "Strafford Branch Library - Community Room (40)",
+      "location": "Library Station - Story Hour Room (30)",
       "source": "Springfield-Greene County Library"
     }
   ]
