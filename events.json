@@ -1,33 +1,33 @@
 {
   "title": "Family Fun Around The Area",
-  "updated": "2026-11-12T14:04:06-06:00",
+  "updated": "2026-11-13T13:50:32-06:00",
   "events": [
     {
-      "title": "Tiny Tots Storytime",
-      "date": "2026-11-13",
-      "time": "9:30 AM",
-      "location": "Library Center - Story Hour Room (45)",
+      "title": "Learn to Grow: A Year in the Life of a Beehive",
+      "date": "2026-11-14",
+      "time": "9:00 AM",
+      "location": "Springfield Botanical Gardens - 2400 S Scenic Avenue Springfield MO 65807",
+      "source": "Springfield-Greene County Park Board"
+    },
+    {
+      "title": "Glowforge Handprint Turkeys",
+      "date": "2026-11-14",
+      "time": "10:00 AM",
+      "location": "Republic Branch Library - Maker Space",
       "source": "Springfield-Greene County Library"
     },
     {
-      "title": "Glowforge Handprint Turkeys for Kids",
-      "date": "2026-11-13",
+      "title": "Nature Adventures",
+      "date": "2026-11-14",
       "time": "10:00 AM",
-      "location": "Midtown Carnegie Branch Library - Maker Space",
+      "location": "Republic Branch Library - Friends of the Library Auditorium (150)",
       "source": "Springfield-Greene County Library"
     },
     {
-      "title": "The Pretenders",
-      "date": "2026-11-13",
+      "title": "Reading Pals",
+      "date": "2026-11-14",
       "time": "10:00 AM",
-      "location": "Schweitzer Brentwood Branch Library - Community Room (100)",
-      "source": "Springfield-Greene County Library"
-    },
-    {
-      "title": "Tiny Tots Storytime",
-      "date": "2026-11-13",
-      "time": "10:00 AM",
-      "location": "Library Station - Story Hour Room (30)",
+      "location": "Strafford Branch Library - Community Room (40)",
       "source": "Springfield-Greene County Library"
     }
   ]
