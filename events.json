@@ -1,14 +1,7 @@
 {
   "title": "Family Fun Around The Area",
-  "updated": "2026-11-14T16:35:13-06:00",
+  "updated": "2026-11-15T00:45:32-06:00",
   "events": [
-    {
-      "title": "Country Dance ft. The Long Time Runnin Band",
-      "date": "2026-11-14",
-      "time": "7:00 PM",
-      "location": "Northview Center - 305 E Talmage Springfield MO 65803",
-      "source": "Springfield-Greene County Park Board"
-    },
     {
       "title": "Glowforge Handprint Turkeys",
       "date": "2026-11-16",
@@ -28,6 +21,13 @@
       "date": "2026-11-16",
       "time": "2:00 PM",
       "location": "Ash Grove Branch Library - Community Room (25)",
+      "source": "Springfield-Greene County Library"
+    },
+    {
+      "title": "Art Exploration",
+      "date": "2026-11-16",
+      "time": "3:00 PM",
+      "location": "Fair Grove Branch Library",
       "source": "Springfield-Greene County Library"
     }
   ]
