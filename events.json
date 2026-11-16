@@ -1,33 +1,33 @@
 {
   "title": "Family Fun Around The Area",
-  "updated": "2026-11-15T00:45:32-06:00",
+  "updated": "2026-11-16T16:16:32-06:00",
   "events": [
     {
-      "title": "Glowforge Handprint Turkeys",
+      "title": "Favorite Family Recipes",
       "date": "2026-11-16",
+      "time": "6:00 PM",
+      "location": "Schweitzer Brentwood Branch Library - Community Room (100)",
+      "source": "Springfield-Greene County Library"
+    },
+    {
+      "title": "Pajama Storytime",
+      "date": "2026-11-16",
+      "time": "6:00 PM",
+      "location": "Library Center - Story Hour Room (45)",
+      "source": "Springfield-Greene County Library"
+    },
+    {
+      "title": "Tiny Tots Storytime",
+      "date": "2026-11-17",
+      "time": "9:30 AM",
+      "location": "Library Center - Story Hour Room (45)",
+      "source": "Springfield-Greene County Library"
+    },
+    {
+      "title": "Racing to Read Storytime",
+      "date": "2026-11-17",
       "time": "10:00 AM",
-      "location": "Republic Branch Library - Maker Space",
-      "source": "Springfield-Greene County Library"
-    },
-    {
-      "title": "Kindergarten Camp",
-      "date": "2026-11-16",
-      "time": "2:00 PM",
-      "location": "Library Station - Story Hour Room (30)",
-      "source": "Springfield-Greene County Library"
-    },
-    {
-      "title": "Open Art Studio: Creative Exploration",
-      "date": "2026-11-16",
-      "time": "2:00 PM",
-      "location": "Ash Grove Branch Library - Community Room (25)",
-      "source": "Springfield-Greene County Library"
-    },
-    {
-      "title": "Art Exploration",
-      "date": "2026-11-16",
-      "time": "3:00 PM",
-      "location": "Fair Grove Branch Library",
+      "location": "Republic Branch Library",
       "source": "Springfield-Greene County Library"
     }
   ]
