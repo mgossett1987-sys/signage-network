@@ -1,21 +1,7 @@
 {
   "title": "Family Fun Around The Area",
-  "updated": "2026-11-16T16:16:32-06:00",
+  "updated": "2026-11-17T02:04:38-06:00",
   "events": [
-    {
-      "title": "Favorite Family Recipes",
-      "date": "2026-11-16",
-      "time": "6:00 PM",
-      "location": "Schweitzer Brentwood Branch Library - Community Room (100)",
-      "source": "Springfield-Greene County Library"
-    },
-    {
-      "title": "Pajama Storytime",
-      "date": "2026-11-16",
-      "time": "6:00 PM",
-      "location": "Library Center - Story Hour Room (45)",
-      "source": "Springfield-Greene County Library"
-    },
     {
       "title": "Tiny Tots Storytime",
       "date": "2026-11-17",
@@ -28,6 +14,20 @@
       "date": "2026-11-17",
       "time": "10:00 AM",
       "location": "Republic Branch Library",
+      "source": "Springfield-Greene County Library"
+    },
+    {
+      "title": "Tiny Tots Storytime",
+      "date": "2026-11-17",
+      "time": "10:00 AM",
+      "location": "Library Station - Story Hour Room (30)",
+      "source": "Springfield-Greene County Library"
+    },
+    {
+      "title": "Racing to Read Preschool Storytime",
+      "date": "2026-11-17",
+      "time": "10:30 AM",
+      "location": "Library Center - Story Hour Room (45)",
       "source": "Springfield-Greene County Library"
     }
   ]
