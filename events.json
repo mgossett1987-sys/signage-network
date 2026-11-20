@@ -1,34 +1,34 @@
 {
   "title": "Family Fun Around The Area",
-  "updated": "2026-11-19T14:46:10-06:00",
+  "updated": "2026-11-20T14:29:35-06:00",
   "events": [
     {
-      "title": "Tiny Tots Storytime",
-      "date": "2026-11-20",
-      "time": "9:30 AM",
-      "location": "Library Center - Story Hour Room (45)",
-      "source": "Springfield-Greene County Library"
+      "title": "Fall Sequiota Cave John Boat Tours",
+      "date": "2026-11-21",
+      "time": "10:00 AM",
+      "location": "Sequiota Park - 3500 S Lone Pine Springfield MO 65804",
+      "source": "Springfield-Greene County Park Board"
     },
     {
-      "title": "Glowforge Handprint Turkeys",
-      "date": "2026-11-20",
-      "time": "10:00 AM",
-      "location": "Republic Branch Library - Maker Space",
-      "source": "Springfield-Greene County Library"
-    },
-    {
-      "title": "Tiny Tots Storytime",
-      "date": "2026-11-20",
-      "time": "10:00 AM",
+      "title": "Racing to Read Storytime",
+      "date": "2026-11-21",
+      "time": "11:00 AM",
       "location": "Library Station - Story Hour Room (30)",
       "source": "Springfield-Greene County Library"
     },
     {
-      "title": "Racing to Read Storytime",
-      "date": "2026-11-20",
-      "time": "10:30 AM",
-      "location": "Library Center - Story Hour Room (45)",
+      "title": "Mayor's Tree Lighting",
+      "date": "2026-11-21",
+      "time": "5:00 PM",
+      "location": "Park Central Branch Library",
       "source": "Springfield-Greene County Library"
+    },
+    {
+      "title": "Festival of Lights Free Ice Skating",
+      "date": "2026-11-21",
+      "time": "6:00 PM",
+      "location": "Brightspeed Ice Park - 635 E Trafficway Springfield MO 65806",
+      "source": "Springfield-Greene County Park Board"
     }
   ]
 }
