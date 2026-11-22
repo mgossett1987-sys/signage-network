@@ -1,21 +1,7 @@
 {
   "title": "Family Fun Around The Area",
-  "updated": "2026-11-21T13:26:14-06:00",
+  "updated": "2026-11-22T01:02:08-06:00",
   "events": [
-    {
-      "title": "Mayor's Tree Lighting",
-      "date": "2026-11-21",
-      "time": "5:00 PM",
-      "location": "Park Central Branch Library",
-      "source": "Springfield-Greene County Library"
-    },
-    {
-      "title": "Festival of Lights Free Ice Skating",
-      "date": "2026-11-21",
-      "time": "6:00 PM",
-      "location": "Brightspeed Ice Park - 635 E Trafficway Springfield MO 65806",
-      "source": "Springfield-Greene County Park Board"
-    },
     {
       "title": "Choose Your Own Adventure: Oregon Trail",
       "date": "2026-11-22",
@@ -28,6 +14,20 @@
       "date": "2026-11-23",
       "time": "6:00 PM",
       "location": "Library Center - Story Hour Room (45)",
+      "source": "Springfield-Greene County Library"
+    },
+    {
+      "title": "Tiny Tots Storytime",
+      "date": "2026-11-24",
+      "time": "9:30 AM",
+      "location": "Library Center - Story Hour Room (45)",
+      "source": "Springfield-Greene County Library"
+    },
+    {
+      "title": "Racing to Read Storytime",
+      "date": "2026-11-24",
+      "time": "10:00 AM",
+      "location": "Republic Branch Library",
       "source": "Springfield-Greene County Library"
     }
   ]
