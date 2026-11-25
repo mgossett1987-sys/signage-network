@@ -1,33 +1,33 @@
 {
   "title": "Family Fun Around The Area",
-  "updated": "2026-11-25T02:48:03-06:00",
+  "updated": "2026-11-25T15:48:52-06:00",
   "events": [
     {
-      "title": "Racing to Read Storytime",
-      "date": "2026-11-25",
-      "time": "10:00 AM",
-      "location": "Republic Branch Library",
+      "title": "Tiny Tots Storytime",
+      "date": "2026-11-27",
+      "time": "9:30 AM",
+      "location": "Library Center - Story Hour Room (45)",
       "source": "Springfield-Greene County Library"
     },
     {
       "title": "Tiny Tots Storytime",
-      "date": "2026-11-25",
+      "date": "2026-11-27",
       "time": "10:00 AM",
-      "location": "Schweitzer Brentwood Branch Library - Community Room (100)",
+      "location": "Library Station - Story Hour Room (30)",
       "source": "Springfield-Greene County Library"
     },
     {
       "title": "Racing to Read Storytime",
-      "date": "2026-11-25",
+      "date": "2026-11-27",
       "time": "10:30 AM",
-      "location": "Ash Grove Branch Library - Community Room (25)",
+      "location": "Library Center - Story Hour Room (45)",
       "source": "Springfield-Greene County Library"
     },
     {
       "title": "Racing to Read Storytime",
-      "date": "2026-11-25",
-      "time": "10:30 AM",
-      "location": "Fair Grove Branch Library",
+      "date": "2026-11-27",
+      "time": "11:15 AM",
+      "location": "Library Station - Story Hour Room (30)",
       "source": "Springfield-Greene County Library"
     }
   ]
